@@ -1,0 +1,25 @@
+crearFecha 12/10/2030
+crearEvento 5 Este es un evento de prueba
+imprimirFechaEvento
+posponerEvento 45
+imprimirFechaEvento
+posponerEvento 100
+imprimirEvento
+liberarEvento
+
+# año bisiesto 
+
+crearFecha 01/01/2024
+crearEvento 23 Este es un segundo evento
+imprimirFechaEvento
+posponerEvento 58
+imprimirFechaEvento
+posponerEvento 1
+imprimirEvento
+posponerEvento 366
+imprimirEvento
+liberarEvento
+
+Fin
+
+

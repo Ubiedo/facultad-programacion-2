@@ -1,0 +1,51 @@
+crearAgenda
+
+# se crean 5 eventos para ingresarlos a la agenda
+
+crearFecha 3/12/2000
+crearEvento 0 Un evento de prueba
+agregarEnAgenda
+
+crearFecha 4/12/2000
+crearEvento 20 Descripcion de otro evento
+agregarEnAgenda
+
+crearFecha 3/12/2000
+crearEvento 33 Un tercer evento
+agregarEnAgenda
+
+crearFecha 1/4/2001
+crearEvento 14 Otro evento
+agregarEnAgenda
+
+crearFecha 3/3/3
+crearEvento 5 Descripcion cinco
+agregarEnAgenda
+
+imprimirAgenda
+
+posponerEnAgenda 0 20
+posponerEnAgenda 20 10
+posponerEnAgenda 33 21
+
+imprimirAgenda
+
+removerDeAgenda 5
+removerDeAgenda 14
+removerDeAgenda 20
+
+imprimirAgenda
+
+posponerEnAgenda 0 1
+
+# Hay dos eventos fecha
+
+imprimirEventosFechaAgenda 24/12/2000
+
+# No hay eventos fecha
+
+imprimirEventosFechaAgenda 23/3/2023
+
+liberarAgenda
+
+Fin

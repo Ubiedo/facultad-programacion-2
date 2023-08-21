@@ -182,6 +182,7 @@ void leerFecha(TFecha &fecha) {
 void main_crearFecha(TFecha &fecha) {
     assert(fecha == NULL);
     leerFecha(fecha);
+    // printf("La fecha fue definida en forma exitosa.\n");
 }
 
 void main_liberarFecha(TFecha &fecha) {
@@ -228,6 +229,7 @@ void main_crearEvento(TEvento &evento, TFecha &fecha) {
     leerRestoLinea(desc);
     evento = crearTEvento(id, desc, fecha);
     fecha = NULL;    
+// printf("Evento creado en forma exitosa.\n");
 }
 
 void main_imprimirIdEvento(TEvento evento) {
@@ -252,11 +254,13 @@ void main_posponerEvento(TEvento &evento) {
     assert(evento != NULL);
     nat cantDias = leerNat();
     posponerTEvento(evento, cantDias);
+    // printf("La fecha del evento se pospuso %d dias.\n", cantDias);
 }
 
 void main_liberarEvento(TEvento &evento) {
     assert(evento != NULL);
     liberarTEvento(evento);
+    // printf("El evento ha sido liberado en forma exitosa.\n");
 }
 
 ////////////////////////////////
@@ -266,11 +270,13 @@ void main_liberarEvento(TEvento &evento) {
 void main_crearAgenda(TAgenda &agenda) {
     assert(agenda == NULL);
     agenda = crearTAgenda();
+    // printf("La agenda ha sido creada en forma exitosa.\n");
 }
 
 void main_liberarAgenda(TAgenda &agenda) {
     assert(agenda != NULL);
     liberarTAgenda(agenda);
+    // printf("La agenda ha sido liberada en forma exitosa.\n");
 }
 
 void main_estaEnAgenda(TAgenda agenda) {
@@ -296,6 +302,7 @@ void main_agregarEnAgenda(TAgenda &agenda, TEvento &evento) {
     assert(agenda != NULL && evento != NULL);
     agregarEnAgenda(agenda, evento);
     evento = NULL;
+// printf("Se ha agregado el evento a la agenda de forma exitosa.\n");
 }
 
 void main_posponerEnAgenda(TAgenda &agenda) {

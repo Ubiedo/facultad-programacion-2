@@ -1,0 +1,32 @@
+1>2>#  se crean 5 eventos para ingresarlos a la agenda.
+3>4>5>6>7>8>9>10>11>12>13>14>15>16>17>18>Evento 5:  Descripcion cinco
+Fecha: 3/3/3
+Evento 33:  Un tercer evento
+Fecha: 3/12/2000
+Evento 0:  Un evento de prueba
+Fecha: 3/12/2000
+Evento 20:  Descripcion de otro evento
+Fecha: 4/12/2000
+Evento 14:  Otro evento
+Fecha: 1/4/2001
+19>El evento con id 0 está en la agenda.
+20>El evento con id 20 está en la agenda.
+21>El evento con id 100 NO está en la agenda.
+22>El evento con id 2 NO está en la agenda.
+23>La nueva fecha del evento 0 pospuesto 10 dias es: 13/12/2000
+24>El evento con id 0 está en la agenda.
+25>El evento con id 5 se removió de la agenda.
+26>El evento con id 14 se removió de la agenda.
+27>El evento con id 20 se removió de la agenda.
+28>El evento con id 5 NO está en la agenda.
+29>El evento con id 14 NO está en la agenda.
+30>Evento 33:  Un tercer evento
+Fecha: 3/12/2000
+Evento 0:  Un evento de prueba
+Fecha: 13/12/2000
+31>#  Hay un evento fecha.
+32>Evento 0:  Un evento de prueba
+Fecha: 13/12/2000
+33>#  No hay eventos fecha.
+34>No se encontraron eventos en la fecha determinada.
+35>36>Fin.

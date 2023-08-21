@@ -117,12 +117,12 @@ void imprimirEventosFecha(TAgenda agenda, TFecha fecha) {
     /************ Parte 5.7 ************/
     /*Escriba el código a continuación */
     nat indice = 0;
-    while (compararTFechas(fechaTEvento(agenda->eventos[indice]), fecha) == -1)
+    while (indice < agenda->tope && compararTFechas(fechaTEvento(agenda->eventos[indice]), fecha) == -1)
     {
         indice++;
     }
     
-    while (compararTFechas(fechaTEvento(agenda->eventos[indice]), fecha) == 0)
+    while (indice < agenda->tope && compararTFechas(fechaTEvento(agenda->eventos[indice]), fecha) == 0)
     {
         imprimirTEvento(agenda->eventos[indice]);
         indice++;
@@ -138,7 +138,7 @@ bool hayEventosFecha(TAgenda agenda, TFecha fecha) {
     /*Iterativa del algoritmo de búsqueda  */
     /*binaria.                              */
     if (agenda->tope > 0){
-        nat minimo = 0, maximo = agenda->tope, indice;
+        int minimo = 0, maximo = agenda->tope, indice;
         while (minimo <= maximo)
         {
             indice = (minimo + maximo)/2;

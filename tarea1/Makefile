@@ -85,7 +85,11 @@ $(EJECUTABLE):$(ODIR)/$(PRINCIPAL).o $(OS)
 	$(LD) $(CCFLAGS) $^ -o $@
 
 # casos de prueba
-CASOS = fecha1-crear-imprimir-liberar \
+CASOS = fecha5-privado \
+		evento4-privado \
+		agenda9-privado \
+		agenda10-privado \
+		fecha1-crear-imprimir-liberar \
 	    fecha2-aumentar \
 		fecha3-comparar \
 		fecha4-combinado \
@@ -203,7 +207,7 @@ check-syntax:
 	gcc -o nul -S ${CHK_SOURCES}
 
 LIB = tarea.a
-$(LIB):	$(ODIR)/utils.o $(ODIR)/info.o $(ODIR)/$(PRINCIPAL).o
+$(LIB):	$(ODIR)/utils.o $(ODIR)/$(PRINCIPAL).o
 	ar -qc $@ $^	
 
 
