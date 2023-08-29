@@ -1,0 +1,16 @@
+1>2>#  Creamos ListaLDE de 4 jugadores.
+3>4>5>6>7>8>9>10>11>12>13>14>15>16>17>18>19>20>21>22>23>24>25>26>27>28>29>30>31>32>33>34>35>La jugador con id 1 está en la lista.
+36>La jugador con id 5 está en la lista.
+37>La jugador con id 9 NO está en la lista.
+38>La jugador con id 0 NO está en la lista.
+39>Jugador 1:  Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+40>Jugador 8:  Andres, Argentina, 21 años
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+Jugada: 4 
+Movimientos: Arriba Arriba Izquierda Izquierda 
+41>42>Fin.

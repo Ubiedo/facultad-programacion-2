@@ -1,0 +1,62 @@
+1>2>#  Creamos ListaLDE de 4 jugadores.
+3>4>5>6>7>8>9>10>11>12>13>14>15>16>17>18>19>20>21>22>23>24>25>26>27>28>29>30>31>32>33>34>35>#  Imprimimos de Mayor a Menor.
+36>Jugador 8:  Andres, Argentina, 21 años
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+Jugada: 4 
+Movimientos: Arriba Arriba Izquierda Izquierda 
+1/1/2023
+Jugador 7:  Luis, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+1/1/2023
+Jugador 5:  Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Arriba Abajo 
+Jugada: 3 
+Movimientos: Arriba Izquierda Izquierda Derecha 
+5/12/2022
+Jugador 1:  Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+1/12/2022
+37>#  Imprimimos de Menor a Mayor.
+38>Jugador 1:  Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+1/12/2022
+Jugador 5:  Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Arriba Abajo 
+Jugada: 3 
+Movimientos: Arriba Izquierda Izquierda Derecha 
+5/12/2022
+Jugador 7:  Luis, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+1/1/2023
+Jugador 8:  Andres, Argentina, 21 años
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+Jugada: 4 
+Movimientos: Arriba Arriba Izquierda Izquierda 
+1/1/2023
+39>#  Cantidad Jugadores en LDE.
+40>La cantidad de jugadores en la lista es: 4.
+41>42>Fin.

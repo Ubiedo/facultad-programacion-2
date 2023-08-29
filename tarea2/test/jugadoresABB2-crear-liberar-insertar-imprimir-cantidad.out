@@ -1,0 +1,76 @@
+1>2>La cantidad de jugadores en el árbol es: 0.
+3>4>#  -- Primer jugador Juan 1 --.
+5>6>7>8>9>Jugador 1:  Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+10>#  -- Segundo jugador Roberto 5 --.
+11>12>13>14>15>16>17>18>19>La cantidad de jugadores en el árbol es: 2.
+20>Jugador 1:  Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugador 5:  Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Arriba Abajo 
+Jugada: 3 
+Movimientos: Arriba Izquierda Izquierda Derecha 
+21>#  -- Tercer jugador Luis 7 --.
+22>23>24>25>26>27>28>29>30>La cantidad de jugadores en el árbol es: 3.
+31>Jugador 1:  Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugador 5:  Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Arriba Abajo 
+Jugada: 3 
+Movimientos: Arriba Izquierda Izquierda Derecha 
+Jugador 7:  Luis, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+32>#  -- Cuarto jugador Andres 8 --.
+33>34>35>36>37>38>39>40>41>#  -- Quinto jugador Emilia 2 --.
+42>43>44>45>46>#  -- Sexto jugador Ines 10 --.
+47>48>49>50>51>52>53>#  -- Septimo jugador Isabel 3 --.
+54>55>56>57>58>Jugador 1:  Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugador 2:  Emmilia, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 3:  Isabel, Uruguay, 26 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 5:  Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Arriba Abajo 
+Jugada: 3 
+Movimientos: Arriba Izquierda Izquierda Derecha 
+Jugador 7:  Luis, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+Jugador 8:  Andres, Uruguay, 19 años
+Jugada: 1 
+Movimientos: Arriba Arriba Arriba Arriba 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Derecha Derecha Arriba Arriba 
+Jugador 10:  Ines, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+59>60>Fin.

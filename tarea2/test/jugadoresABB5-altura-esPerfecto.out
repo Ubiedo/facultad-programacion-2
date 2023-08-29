@@ -1,0 +1,42 @@
+1>2>#  arbol con 0 elementos - altura 0.
+3>La altura del árbol de jugadores es: 0.
+4>#  arbol es perfecto.
+5>El árbol de jugadores es perfecto.
+6>#  -- Primer jugador Juan 5 --.
+7>8>9>10>11>#  arbol con 1 elemento - altura 1.
+12>La altura del árbol de jugadores es: 1.
+13>#  arbol es perfecto.
+14>El árbol de jugadores es perfecto.
+15>#  -- Segundo jugador Roberto 10 --.
+16>17>18>19>20>#  arbol con 2 elementos - altura 2.
+21>La altura del árbol de jugadores es: 2.
+22>#  arbol no es perfecto.
+23>El árbol de jugadores NO es perfecto.
+24>#  -- Tercer jugador Luis 2 --.
+25>26>27>28>29>#  arbol con 3 elementos - altura 2.
+30>La altura del árbol de jugadores es: 2.
+31>#  arbol es perfecto.
+32>El árbol de jugadores es perfecto.
+33>#  -- Cuarto jugador Andres 20 --.
+34>35>36>37>38>#  -- Quinto jugador Emilia 7 --.
+39>40>41>42>43>#  subarboles con alturas distintas.
+44>#  arbol no es perfecto.
+45>El árbol de jugadores NO es perfecto.
+46>#  -- Sexto jugador Ines 3 --.
+47>48>49>50>51>#  -- Septimo jugador Isabel 1 --.
+52>53>54>55>56>#  arbol con 7 elementos - altura 3.
+57>La altura del árbol de jugadores es: 3.
+58>#  arbol es perfecto.
+59>El árbol de jugadores es perfecto.
+60>#  remuevo la persona 20 - altura 3.
+61>62>La altura del árbol de jugadores es: 3.
+63>#  arbol no es perfecto.
+64>El árbol de jugadores NO es perfecto.
+65>#  remuevo la persona 5.
+66>67>#  remuevo la persona 2.
+68>69>#  arbol con 4 elementos - altura 3.
+70>La altura del árbol de jugadores es: 3.
+71>#  remuevo la persona 7.
+72>73>La altura del árbol de jugadores es: 2.
+74>El árbol de jugadores es perfecto.
+75>76>Fin.
