@@ -41,6 +41,7 @@ void imprimirTPartida(TPartida partida){
   TPartida imprimir = partida;
   while (imprimir != NULL){
     imprimirTJugada(imprimir->jugada);
+    imprimir = imprimir->sig;
   }
 }
 
@@ -72,6 +73,7 @@ TPartida copiarTPartida(TPartida partida){
       copiar = copiar->sig;
     }
   }
+  return nueva;
 }
 
 bool estaEnTPartida(TPartida partida, int numeroDeJugada){
