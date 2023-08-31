@@ -63,6 +63,13 @@ nat cantidadTJugadoresABB(TJugadoresABB jugadoresABB) {
   }
   return cantidad;
 }
+/*
+if (){
+    return func(hijo->izq) + func(hijo->der) + 1;
+} else {
+    return 0;
+}
+*/
 
 TJugador maxIdJugador(TJugadoresABB jugadoresABB) {
   if (jugadoresABB->derecha != NULL){
