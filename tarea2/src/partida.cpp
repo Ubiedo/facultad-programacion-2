@@ -6,32 +6,33 @@ struct rep_partida {
 };
 
 TPartida crearTPartida(){
-  TPartida partida = new rep_partida;
-  partida->jugada = NULL;
-  partida->sig = NULL;
-  return partida;
+  return NULL;
 }
 
 void agregarEnTPartida(TPartida& partida, TJugada jugada){
-  if (partida->jugada == NULL){
+  if (partida == NULL){
+    // crear la partida, hay 0 elementos previos
+    partida = new rep_partida;
     partida->jugada = jugada;
+    partida->sig = NULL;
   } else {
-    TPartida nueva = crearTPartida();
-    nueva->jugada = jugada;
-    nueva->sig = partida;
+    // hay almenos un elemento previo
+    TPartida agregar = new rep_partida;
+    agregar->jugada = jugada;
+    agregar->sig = partida;
     if (numeroTJugada(partida->jugada) > numeroTJugada(jugada)){
-      partida = nueva;
+      partida = agregar;
     } else {
-      while (nueva->sig->sig != NULL && numeroTJugada(nueva->sig->sig->jugada) < numeroTJugada(jugada)){
-	nueva->sig = nueva->sig->sig;
+      while (agregar->sig->sig != NULL && numeroTJugada(agregar->sig->sig->jugada) < numeroTJugada(jugada)){
+	agregar->sig = agregar->sig->sig;
       }
-      if (nueva->sig->sig == NULL){
-	nueva->sig->sig = nueva;
-	nueva->sig = NULL;
+      if (agregar->sig->sig == NULL){
+	agregar->sig->sig = agregar;
+	agregar->sig = NULL;
       } else {
-	TPartida ubicacion = nueva->sig->sig;
-	nueva->sig->sig = nueva;
-	nueva->sig = ubicacion;
+	TPartida ubicacion = agregar->sig->sig;
+	agregar->sig->sig = agregar;
+	agregar->sig = ubicacion;
       }
     }
   }
@@ -46,27 +47,29 @@ void imprimirTPartida(TPartida partida){
 }
 
 void liberarTPartida(TPartida& partida){
-  TPartida liberar = NULL;
-  while (partida != NULL){
-    liberar = partida;
-    liberarTJugada(liberar->jugada);
+  TPartida liberar = partida;
+  while (liberar != NULL){
     partida = partida->sig;
+    liberarTJugada(liberar->jugada);
     delete liberar;
+    liberar = partida;
   }
 }
 
 bool esVaciaTPartida(TPartida partida){
-    return partida->jugada == NULL;
+  return partida == NULL;
 }
 
 TPartida copiarTPartida(TPartida partida){
-  TPartida nueva = crearTPartida(), copiar = partida, copia = NULL, conector = NULL;
-  if (copiar->jugada != NULL){
+  TPartida nueva = NULL, copiar = partida, copia = NULL, conector = NULL;
+  if (partida != NULL){
+    nueva = new rep_partida;
+    nueva->sig = NULL;
     nueva->jugada = copiarTJugada(copiar->jugada);
     conector = nueva;
     copiar = copiar->sig;
     while (copiar != NULL){
-      copia = crearTPartida();
+      copia = new rep_partida;
       copia->jugada = copiarTJugada(copiar->jugada);
       conector->sig = copia;
       conector = copia;
@@ -77,19 +80,19 @@ TPartida copiarTPartida(TPartida partida){
 }
 
 bool estaEnTPartida(TPartida partida, int numeroDeJugada){
-  TPartida juego = partida;
-  while ((juego != NULL) && (numeroTJugada(juego->jugada) != numeroDeJugada)){
-    juego = juego->sig;
+  TPartida buscar = partida;
+  while (buscar != NULL && numeroTJugada(buscar->jugada) != numeroDeJugada){
+    buscar = buscar->sig;
   }
-  return juego != NULL;
+  return buscar != NULL;
 }
 
 TJugada obtenerDeTPartida(TPartida partida, int numeroDeJugada){
-  TPartida juego = partida;
-  while (juego != NULL && numeroTJugada(juego->jugada) != numeroDeJugada){
-    juego = juego->sig;
+  TPartida buscada = partida;
+  while (numeroTJugada(buscada->jugada) != numeroDeJugada){
+    buscada = buscada->sig;
   }
-  return juego->jugada;
+  return buscada->jugada;
 }
 
 void imprimirJugadasConMovimiento(TPartida partida, int pos, Movimiento mov){
