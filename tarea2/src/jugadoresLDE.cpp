@@ -27,26 +27,26 @@ void insertarTJugadoresLDE(TJugadoresLDE &jugadores, TJugador &jugador, TFecha &
   TNodo nuevo = new rep_nodo;
   nuevo->jugador = jugador;
   nuevo->fecha = fecha;
+  nuevo->proximo = NULL;
+  nuevo->previo = NULL;
   if (jugadores->primero == NULL){
     // la lista esta vacia
-    nuevo->proximo = NULL;
-    nuevo->previo = NULL;
     jugadores->primero = nuevo;
     jugadores->ultimo = nuevo;
   } else {
-    TNodo ubicacion = jugadores->primero->proximo;
     // hay almenos un nodo
     if (compararTFechas(jugadores->primero->fecha, fecha) < 0){
       // va al inicio
       nuevo->proximo = jugadores->primero;
       nuevo->previo = NULL;
       jugadores->primero = nuevo;
-    } else if (compararTFechas(jugadores->ultimo->fecha, fecha) > 0) {
+    } else if (compararTFechas(jugadores->ultimo->fecha, fecha) >= 0) {
       // va al final
       nuevo->proximo = NULL;
       nuevo->previo = jugadores->ultimo;
       jugadores->ultimo = nuevo;
     } else {
+      TNodo ubicacion = jugadores->primero->proximo;
       // entonces va entre dos nodos
       while (compararTFechas(ubicacion->fecha, fecha) < 1){
 	ubicacion = ubicacion->proximo;
@@ -63,6 +63,8 @@ void insertarTJugadoresLDE(TJugadoresLDE &jugadores, TJugador &jugador, TFecha &
 void liberarTNodo(TNodo &nodo){
   liberarTJugador(nodo->jugador);
   liberarTFecha(nodo->fecha);
+  nodo->proximo = NULL;
+  nodo->previo = NULL;
   delete nodo;
   nodo = NULL;
 }

@@ -3,14 +3,13 @@
 // Define la estructura Jugada
 struct rep_jugada {
   int numero;
-  Movimiento* movimientos;
+  Movimiento movimientos[4];
 };
 
 // Crea una jugada con los valores dados
 TJugada crearTJugada(int numero, Movimiento mov1, Movimiento mov2, Movimiento mov3, Movimiento mov4){
   TJugada jugada = new rep_jugada;
   jugada->numero = numero;
-  jugada->movimientos = new Movimiento[4];
   jugada->movimientos[0] = mov1;
   jugada->movimientos[1] = mov2;
   jugada->movimientos[2] = mov3;
@@ -20,12 +19,12 @@ TJugada crearTJugada(int numero, Movimiento mov1, Movimiento mov2, Movimiento mo
 
 // Función que retorna el numero de la jugada
 int numeroTJugada(TJugada jugada){
-    return jugada->numero;
+  return jugada->numero;
 }
 
 // Función que retorna los movimientos de una jugada
 Movimiento * movimientoTJugada(TJugada jugada) {
-    return jugada->movimientos;
+  return jugada->movimientos;
 }
 
 // Devuelve true si y solo si la jugada tiene el movimiento mov en la posicion pos
@@ -35,7 +34,7 @@ bool tieneMovimientoEnPosTJugada(TJugada jugada, int pos, Movimiento mov){
 
 // Imprime la jugada
 void imprimirTJugada(TJugada jugada) {
-  printf("Jugada: %d\n", jugada->numero);
+  printf("Jugada: %d \n", jugada->numero);
   printf("Movimientos: ");
   for (int i = 0; i < 4; i++){
     //Derecha = 1, Izquierda = 2, Arriba = 3, Abajo = 4
@@ -55,15 +54,12 @@ void imprimirTJugada(TJugada jugada) {
     }
   }
   printf("\n");
-  return;
 }
 
 // Libera la memoria asignada para un jugada
 void liberarTJugada(TJugada &jugada) {
-  delete jugada->movimientos;
   delete jugada;
   jugada = NULL;
-  return;
 }
 
 // Retorna una copia de la jugada

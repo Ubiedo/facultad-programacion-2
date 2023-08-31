@@ -77,19 +77,19 @@ TPartida copiarTPartida(TPartida partida){
 }
 
 bool estaEnTPartida(TPartida partida, int numeroDeJugada){
-  TPartida jugada = partida;
-  while (jugada != NULL && numeroTJugada(jugada->jugada) != numeroDeJugada){
-    jugada = jugada->sig;
+  TPartida juego = partida;
+  while ((juego != NULL) && (numeroTJugada(juego->jugada) != numeroDeJugada)){
+    juego = juego->sig;
   }
-  return jugada != NULL;
+  return juego != NULL;
 }
 
 TJugada obtenerDeTPartida(TPartida partida, int numeroDeJugada){
-  TPartida jugada = partida;
-  while (jugada != NULL && numeroTJugada(jugada->jugada) != numeroDeJugada){
-    jugada = jugada->sig;
+  TPartida juego = partida;
+  while (juego != NULL && numeroTJugada(juego->jugada) != numeroDeJugada){
+    juego = juego->sig;
   }
-  return jugada->jugada;
+  return juego->jugada;
 }
 
 void imprimirJugadasConMovimiento(TPartida partida, int pos, Movimiento mov){
@@ -108,7 +108,11 @@ void removerDeTPartida(TPartida& partida, int numeroDeJugada){
     anterior = buscada;
     buscada = buscada->sig;
   }
+  if (anterior != NULL){
+    anterior->sig = buscada->sig;
+  } else {
+    partida = buscada->sig;
+  }
   liberarTJugada(buscada->jugada);
-  anterior->sig = buscada->sig;
   delete buscada;
 }

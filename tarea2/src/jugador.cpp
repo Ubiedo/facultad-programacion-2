@@ -11,6 +11,7 @@ struct rep_jugador {
 TJugador crearTJugador(nat id, nat edad, const char pais[100], const char nombre[100], TPartida partida) {
   TJugador jugador = new rep_jugador;
   jugador->id = id;
+  jugador->edad = edad;
   strcpy(jugador->pais, pais);
   strcpy(jugador->nombre, nombre);
   jugador->partida = partida;
@@ -65,5 +66,5 @@ TJugada obtenerDePartidaDeTJugador(TJugador jugador, int numeroDeJugada){
 }
 
 TJugador copiarTJugador(TJugador jugador){
-  return crearTJugador(jugador->id, jugador->edad, jugador->pais, jugador->nombre, jugador->partida);
+  return crearTJugador(jugador->id, jugador->edad, jugador->pais, jugador->nombre, copiarTPartida(jugador->partida));
 }
