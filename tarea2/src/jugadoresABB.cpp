@@ -7,20 +7,18 @@ struct rep_jugadoresABB {
 };
 
 TJugadoresABB crearTJugadoresABB() {
-  TJugadoresABB arbol = new rep_jugadoresABB;
-  arbol->jugador = NULL;
-  arbol->izquierda = NULL;
-  arbol->derecha = NULL;
-  return arbol;
+  return NULL;
 }
 
 bool esVacioTJugadoresABB(TJugadoresABB jugadoresABB) {
-    return jugadoresABB->jugador != NULL;
+    return jugadoresABB == NULL;
 }
 
 void insertarTJugadoresABB(TJugadoresABB &jugadoresABB, TJugador jugador) {
   if (jugadoresABB == NULL){
-    jugadoresABB = crearTJugadoresABB();
+    jugadoresABB = new rep_jugadoresABB;
+    jugadoresABB->izquierda = NULL;
+    jugadoresABB->derecha = NULL;
     jugadoresABB->jugador = jugador;
   } else {
     if (idTJugador(jugador) < idTJugador(jugadoresABB->jugador)){
@@ -32,44 +30,29 @@ void insertarTJugadoresABB(TJugadoresABB &jugadoresABB, TJugador jugador) {
 }
 
 void liberarTJugadoresABB(TJugadoresABB &jugadoresABB) {
-  if (jugadoresABB->izquierda != NULL){
+  if (jugadoresABB != NULL){
     liberarTJugadoresABB(jugadoresABB->izquierda);
-  }
-  if (jugadoresABB->derecha != NULL){
     liberarTJugadoresABB(jugadoresABB->derecha);
+    liberarTJugador(jugadoresABB->jugador);
+    delete jugadoresABB;
+    jugadoresABB = NULL;
   }
-  liberarTJugador(jugadoresABB->jugador);
-  delete jugadoresABB;
-  jugadoresABB = NULL;
 }
 
 void imprimirTJugadoresABB(TJugadoresABB jugadoresABB) {
-  if (jugadoresABB->izquierda != NULL){
+  if (jugadoresABB != NULL){
     imprimirTJugadoresABB(jugadoresABB->izquierda);
-  }
-  imprimirTJugador(jugadoresABB->jugador);
-  if (jugadoresABB->derecha){
+    imprimirTJugador(jugadoresABB->jugador);
     imprimirTJugadoresABB(jugadoresABB->derecha);
   }
 }
 
 nat cantidadTJugadoresABB(TJugadoresABB jugadoresABB) {
-  nat cantidad = 1;
-  if (jugadoresABB->izquierda != NULL){
-    cantidad += cantidadTJugadoresABB(jugadoresABB->izquierda);
+  if (jugadoresABB != NULL){
+    return cantidadTJugadoresABB(jugadoresABB->izquierda) + cantidadTJugadoresABB(jugadoresABB->derecha) + 1;
   }
-  if (jugadoresABB->derecha != NULL){
-    cantidad += cantidadTJugadoresABB(jugadoresABB->derecha);
-  }
-  return cantidad;
+  return 0;
 }
-/*
-if (){
-    return func(hijo->izq) + func(hijo->der) + 1;
-} else {
-    return 0;
-}
-*/
 
 TJugador maxIdJugador(TJugadoresABB jugadoresABB) {
   if (jugadoresABB->derecha != NULL){
