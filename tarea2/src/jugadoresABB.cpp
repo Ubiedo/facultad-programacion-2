@@ -29,13 +29,17 @@ void insertarTJugadoresABB(TJugadoresABB &jugadoresABB, TJugador jugador) {
   }
 }
 
+void liberarNodo(TJugadoresABB &jugadoresABB){
+    delete jugadoresABB;
+    jugadoresABB = NULL;
+}
+
 void liberarTJugadoresABB(TJugadoresABB &jugadoresABB) {
   if (jugadoresABB != NULL){
     liberarTJugadoresABB(jugadoresABB->izquierda);
     liberarTJugadoresABB(jugadoresABB->derecha);
     liberarTJugador(jugadoresABB->jugador);
-    delete jugadoresABB;
-    jugadoresABB = NULL;
+    liberarNodo(jugadoresABB);
   }
 }
 
@@ -62,24 +66,41 @@ TJugador maxIdJugador(TJugadoresABB jugadoresABB) {
 }
 
 void removerTJugadoresABB(TJugadoresABB &jugadoresABB, nat id) {
+  if (idTJugador(jugadoresABB->jugador) < id){
+    removerTJugadoresABB(jugadoresABB->derecha, id);
+  } else if (idTJugador(jugadoresABB->izquierda) > id){
+    removerTJugadoresABB(jugadoresABB->izquierda, id);
+  } else {
+    // ...
+  }
 }
 
 bool estaTJugadoresABB(TJugadoresABB jugadoresABB, nat id) {
-    return false;
+  if (idTJugador(jugadoresABB->jugador) < id){
+    return estaTJugadoresABB(jugadoresABB->derecha, id);
+  } else if (idTJugador(jugadoresABB->izquierda) > id){
+    return estaTJugadoresABB(jugadoresABB->izquierda, id);
+  }
+  return jugadoresABB != NULL;
 }
 
 TJugador obtenerDeTJugadoresABB(TJugadoresABB jugadoresABB, nat id) {
-    return NULL;
+  if (idTJugador(jugadoresABB->jugador) < id){
+    return estaTJugadoresABB(jugadoresABB->derecha, id);
+  } else if (idTJugador(jugadoresABB->izquierda) > id){
+    return estaTJugadoresABB(jugadoresABB->izquierda, id);
+  }
+  return jugadoresABB->jugador;
 }
 
 nat alturaTJugadoresABB(TJugadoresABB jugadoresABB) {
-    return 0;
+  return 0;
 }
 
 bool esPerfectoTJugadoresABB(TJugadoresABB jugadoresABB) {
-    return false;
+  return false;
 }
 
 TJugadoresABB mayoresTJugadoresABB(TJugadoresABB jugadoresABB, nat edad) {
-    return NULL;
+  return NULL;
 }
