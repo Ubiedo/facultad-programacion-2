@@ -30,7 +30,6 @@ void insertarTJugadoresABB(TJugadoresABB &jugadoresABB, TJugador jugador) {
 }
 
 void liberarNodo(TJugadoresABB &jugadoresABB){
-    liberarTJugador(jugadoresABB->jugador);
     delete jugadoresABB;
     jugadoresABB = NULL;
 }
@@ -39,6 +38,7 @@ void liberarTJugadoresABB(TJugadoresABB &jugadoresABB) {
   if (jugadoresABB != NULL){
     liberarTJugadoresABB(jugadoresABB->izquierda);
     liberarTJugadoresABB(jugadoresABB->derecha);
+    liberarTJugador(jugadoresABB->jugador);
     liberarNodo(jugadoresABB);
   }
 }
@@ -72,6 +72,7 @@ void removerTJugadoresABB(TJugadoresABB &jugadoresABB, nat id) {
     removerTJugadoresABB(jugadoresABB->izquierda, id);
   } else {
     // remplazar el encontrado
+    liberarTJugador(jugadoresABB->jugador);
     if (jugadoresABB->izquierda == NULL){
       TJugadoresABB remplazo = jugadoresABB->derecha;
       liberarNodo(jugadoresABB);
@@ -82,8 +83,7 @@ void removerTJugadoresABB(TJugadoresABB &jugadoresABB, nat id) {
       jugadoresABB = remplazo;
     } else {
       // tiene ambos subarboles no vacios, reemplazar por jugador de mayor id del subarbol izquierdo
-      liberarTJugador(jugadoresABB->jugador);
-      jugadoresABB->jugador = 
+      jugadoresABB->jugador = maxIdJugador(jugadoresABB->izquierda);
     }
   }
 }
