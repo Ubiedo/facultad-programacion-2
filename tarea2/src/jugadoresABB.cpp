@@ -83,7 +83,9 @@ void removerTJugadoresABB(TJugadoresABB &jugadoresABB, nat id) {
       jugadoresABB = remplazo;
     } else {
       // tiene ambos subarboles no vacios, reemplazar por jugador de mayor id del subarbol izquierdo
-      jugadoresABB->jugador = maxIdJugador(jugadoresABB->izquierda);
+      jugadoresABB->jugador = copiarTJugador(maxIdJugador(jugadoresABB->izquierda));
+      // eliminar el nodo donde estaba el maxIdJugador
+      removerTJugadoresABB(jugadoresABB->izquierda, idTJugador(jugadoresABB->jugador));
     }
   }
 }
@@ -107,6 +109,15 @@ TJugador obtenerDeTJugadoresABB(TJugadoresABB jugadoresABB, nat id) {
 }
 
 nat alturaTJugadoresABB(TJugadoresABB jugadoresABB) {
+  if (jugadoresABB != NULL){
+    nat alturaIzquierda = alturaTJugadoresABB(jugadoresABB->izquierda);
+    nat alturaDerecha = alturaTJugadoresABB(jugadoresABB->derecha);
+    if (alturaIzquierda > alturaDerecha){
+      return alturaIzquierda + 1;
+    } else {
+      return alturaDerecha + 1;
+    }
+  }
   return 0;
 }
 
