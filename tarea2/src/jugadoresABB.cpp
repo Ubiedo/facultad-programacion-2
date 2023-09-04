@@ -127,7 +127,7 @@ bool esPerfectoTJugadoresABB(TJugadoresABB jugadoresABB) {
     if (jugadoresABB->izquierda != NULL && jugadoresABB->derecha != NULL){
       // tiene ambos hijos
       // un arbol es perfecto si sus subarboles son perfectos y tienen la misma altura
-      // el siguiente codigo funciona, recorre muchas veces los nodos? mejorar este caso..
+      // el siguiente codigo funciona, recorre muchas veces los nodos. mejorar este caso..
       return ((esPerfectoTJugadoresABB(jugadoresABB->izquierda) && esPerfectoTJugadoresABB(jugadoresABB->derecha)) && (alturaTJugadoresABB(jugadoresABB->izquierda) == alturaTJugadoresABB(jugadoresABB->derecha)));
     } else {
       // ya que hay hijos de un lado pero no del otro
