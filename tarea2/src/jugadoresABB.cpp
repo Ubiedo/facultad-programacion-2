@@ -122,7 +122,18 @@ nat alturaTJugadoresABB(TJugadoresABB jugadoresABB) {
 }
 
 bool esPerfectoTJugadoresABB(TJugadoresABB jugadoresABB) {
-  return false;
+  if (jugadoresABB != NULL && (jugadoresABB->izquierda != NULL || jugadoresABB->derecha != NULL)){
+    // estos son los casos a analizar el comportamiento de los hijos
+    if ((jugadoresABB->izquierda != NULL && jugadoresABB->derecha == NULL) || (jugadoresABB->izquierda == NULL && jugadoresABB->derecha != NULL)){
+      // ya que hay hijos de un lado pero no del otro
+      return false;
+    } else {
+      // tiene ambos hijos
+      // el codigo de abajo recorre mas de una vez los nodos, modificarlo
+      return cantidadTJugadoresABB(jugadoresABB->izquierda) == cantidadTJugadoresABB(jugadoresABB->derecha);
+    }
+  }
+  return true;
 }
 
 TJugadoresABB mayoresTJugadoresABB(TJugadoresABB jugadoresABB, nat edad) {
