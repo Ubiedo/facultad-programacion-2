@@ -121,6 +121,7 @@ nat alturaTJugadoresABB(TJugadoresABB jugadoresABB) {
   return 0;
 }
 
+// no esta hecho en theta(n), CUIDADO!!!!
 bool esPerfectoTJugadoresABB(TJugadoresABB jugadoresABB) {
   if (jugadoresABB != NULL && (jugadoresABB->izquierda != NULL || jugadoresABB->derecha != NULL)){
     // estos son los casos a analizar el comportamiento de los hijos
