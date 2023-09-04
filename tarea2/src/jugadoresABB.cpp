@@ -138,6 +138,13 @@ bool esPerfectoTJugadoresABB(TJugadoresABB jugadoresABB) {
   return true;
 }
 
+bool perfecto(TJugadoresABB jugadoresABB){
+  if (jugadoresABB != NULL){
+    // ...
+  }
+  return true;
+}
+
 TJugadoresABB mayoresTJugadoresABB(TJugadoresABB jugadoresABB, nat edad) {
   return NULL;
 }
