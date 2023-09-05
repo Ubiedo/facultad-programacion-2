@@ -35,20 +35,20 @@ void insertarTJugadoresLDE(TJugadoresLDE &jugadores, TJugador &jugador, TFecha &
     jugadores->ultimo = nuevo;
   } else {
     // hay almenos un nodo
-    if (compararTFechas(jugadores->primero->fecha, fecha) < 0){
+    if (compararTFechas(jugadores->primero->fecha, fecha) < 1){
       // va al inicio
       nuevo->proximo = jugadores->primero;
-      nuevo->previo = NULL;
+      nuevo->proximo->previo = nuevo;
       jugadores->primero = nuevo;
-    } else if (compararTFechas(jugadores->ultimo->fecha, fecha) >= 0) {
+    } else if (compararTFechas(jugadores->ultimo->fecha, fecha) > 0) {
       // va al final
-      nuevo->proximo = NULL;
       nuevo->previo = jugadores->ultimo;
+      nuevo->previo->proximo = nuevo;
       jugadores->ultimo = nuevo;
     } else {
       TNodo ubicacion = jugadores->primero->proximo;
       // entonces va entre dos nodos
-      while (compararTFechas(ubicacion->fecha, fecha) < 1){
+      while (compararTFechas(ubicacion->fecha, fecha) > 0){
 	ubicacion = ubicacion->proximo;
       }
       nuevo->proximo = ubicacion->proximo;
@@ -84,6 +84,7 @@ void imprimirMayorAMenorTJugadoresLDE(TJugadoresLDE jugadores){
   TNodo imprimir = jugadores->primero;
   while (imprimir != NULL){
     imprimirTJugador(imprimir->jugador);
+    imprimirTFecha(imprimir->fecha);
     imprimir = imprimir->proximo;
   }
 }
@@ -92,6 +93,7 @@ void imprimirMenorAMayorTJugadoresLDE(TJugadoresLDE jugadores){
   TNodo imprimir = jugadores->ultimo;
   while (imprimir != NULL){
     imprimirTJugador(imprimir->jugador);
+    imprimirTFecha(imprimir->fecha);
     imprimir = imprimir->previo;
   }
 }
@@ -164,56 +166,62 @@ TJugadoresLDE obtenerSegunTFecha(TJugadoresLDE jugadores, TFecha fecha){
 }
 
 TJugadoresLDE unirTJugadoresLDE(TJugadoresLDE &jugadores1, TJugadoresLDE &jugadores2){
-  TJugadoresLDE mezcla = crearTJugadoresLDE();
-  TNodo buscarEn1 = jugadores1->primero, buscarEn2 = jugadores2->primero;
-  nat caso = 1;
-  // 1 AMBOS NULL
-  // 2 BUSCAR EN 1 ES NULL
-  // 3 BUSCAR EN 2 ES NULL
-  // 6 NIGUNO ES NULL
-  if (buscarEn1 != NULL){
-    caso*=3;
-  }
-  if (buscarEn2 != NULL){
-    caso*=2;
-  }
-  int comparacion;
-  while (caso != 1){
-    switch ( caso )
-      {
-      case 2:
-	insertarTJugadoresLDE(mezcla, buscarEn2->jugador, buscarEn2->fecha);
-	if ((buscarEn2 = buscarEn2->proximo) == NULL){
-	  caso = 1;
-	}
-	break;
-      case 3:
-	insertarTJugadoresLDE(mezcla, buscarEn1->jugador, buscarEn1->fecha);
-	if ((buscarEn1 = buscarEn1->proximo) == NULL){
-	  caso = 1;
-	}
-	break;
-      case 6:
-	comparacion = compararTFechas(buscarEn1->fecha, buscarEn2->fecha);
-	if (comparacion == -1 || (comparacion == 0 && idTJugador(buscarEn1->jugador) < idTJugador(buscarEn2->jugador))){
-	  insertarTJugadoresLDE(mezcla, buscarEn1->jugador, buscarEn1->fecha);
+  TJugadoresLDE junta = crearTJugadoresLDE();
+  if (jugadores1 == NULL || jugadores1->primero == NULL){
+    if (jugadores2 != NULL && jugadores2->primero != NULL){
+      junta->primero = jugadores2->primero;
+      junta->ultimo = jugadores2->ultimo;
+      junta->cantidad = jugadores2->cantidad;
+    }
+  } else if (jugadores2 == NULL || jugadores2->primero == NULL){
+    if (jugadores1 != NULL && jugadores1->primero != NULL){
+      junta->primero = jugadores1->primero;
+      junta->ultimo = jugadores1->ultimo;
+      junta->cantidad = jugadores1->cantidad;
+    }
+  } else {
+    // ninguno es NULL, entonces hay que recorrer ambos y re hacer los vinculos
+    TNodo buscarEn1 = jugadores1->primero, buscarEn2 = jugadores2->primero;
+    // fijamos el primero para ponerlo en mezcla->primero
+    if (compararTFechas(buscarEn1->fecha, buscarEn2->fecha) < 1){
+      junta->primero = buscarEn2;
+      buscarEn2 = buscarEn2->proximo;
+    } else {
+      junta->primero = buscarEn1;
+      buscarEn1 = buscarEn1->proximo;
+    }
+    TNodo juntar = junta->primero;
+    while (buscarEn1 != NULL || buscarEn2 != NULL){
+      if (buscarEn1 != NULL && buscarEn2 != NULL){
+	if (compararTFechas(buscarEn1->fecha, buscarEn2->fecha) < 1){
+	  juntar->proximo = buscarEn2;
+	  buscarEn2->previo = juntar;
+	  buscarEn2 = buscarEn2->proximo;
 	} else {
-	  insertarTJugadoresLDE(mezcla, buscarEn2->jugador, buscarEn2->fecha);
+	  juntar->proximo = buscarEn1;
+	  buscarEn1->previo = juntar;
+	  buscarEn1 = buscarEn1->proximo;
 	}
-	if ((buscarEn2 = buscarEn2->proximo) == NULL){
-	  caso /= 2;
-	}
-	if ((buscarEn1 = buscarEn1->proximo) == NULL){
-	  caso /= 3;
-	}
-	break;
-      default:
-	break;
+      } else if (buscarEn1 != NULL){
+	juntar->proximo = buscarEn1;
+	buscarEn1->previo = juntar;
+	buscarEn1 = buscarEn1->proximo;
+      } else {
+	juntar->proximo = buscarEn2;
+	buscarEn2->previo = juntar;
+	buscarEn2 = buscarEn2->proximo;
       }
+    }
+    junta->ultimo = juntar;
+    junta->cantidad = jugadores1->cantidad + jugadores2->cantidad;
   }
-  delete jugadores1;
-  delete jugadores2;
-  jugadores1 = NULL;
-  jugadores2 = NULL;
-  return mezcla;
+  if (jugadores1 != NULL){
+    delete jugadores1;
+    jugadores1 = NULL;
+  }
+  if (jugadores2 != NULL){
+    delete jugadores2;
+    jugadores2 = NULL;
+  }
+  return junta;
 }
