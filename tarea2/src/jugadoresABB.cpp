@@ -68,7 +68,7 @@ TJugador maxIdJugador(TJugadoresABB jugadoresABB) {
 void removerTJugadoresABB(TJugadoresABB &jugadoresABB, nat id) {
   if (idTJugador(jugadoresABB->jugador) < id){
     removerTJugadoresABB(jugadoresABB->derecha, id);
-  } else if (idTJugador(jugadoresABB->izquierda) > id){
+  } else if (idTJugador(jugadoresABB->jugador) > id){
     removerTJugadoresABB(jugadoresABB->izquierda, id);
   } else {
     // remplazar el encontrado
@@ -93,7 +93,7 @@ void removerTJugadoresABB(TJugadoresABB &jugadoresABB, nat id) {
 bool estaTJugadoresABB(TJugadoresABB jugadoresABB, nat id) {
   if (idTJugador(jugadoresABB->jugador) < id){
     return estaTJugadoresABB(jugadoresABB->derecha, id);
-  } else if (idTJugador(jugadoresABB->izquierda) > id){
+  } else if (idTJugador(jugadoresABB->jugador) > id){
     return estaTJugadoresABB(jugadoresABB->izquierda, id);
   }
   return jugadoresABB != NULL;
@@ -101,9 +101,9 @@ bool estaTJugadoresABB(TJugadoresABB jugadoresABB, nat id) {
 
 TJugador obtenerDeTJugadoresABB(TJugadoresABB jugadoresABB, nat id) {
   if (idTJugador(jugadoresABB->jugador) < id){
-    return estaTJugadoresABB(jugadoresABB->derecha, id);
-  } else if (idTJugador(jugadoresABB->izquierda) > id){
-    return estaTJugadoresABB(jugadoresABB->izquierda, id);
+    return obtenerDeTJugadoresABB(jugadoresABB->derecha, id);
+  } else if (idTJugador(jugadoresABB->jugador) > id){
+    return obtenerDeTJugadoresABB(jugadoresABB->izquierda, id);
   }
   return jugadoresABB->jugador;
 }
@@ -144,7 +144,7 @@ TJugadoresABB mayoresTJugadoresABB(TJugadoresABB jugadoresABB, nat edad) {
     if (edadTJugador(jugadoresABB->jugador) > edad){
       TJugadoresABB mayor = new rep_jugadoresABB;
       mayor->jugador = copiarTJugador(jugadoresABB->jugador);
-      mayor->izquierda = mayoresTJugadoresABB(jugadoresABB-izquierda, edad);
+      mayor->izquierda = mayoresTJugadoresABB(jugadoresABB->izquierda, edad);
       mayor->derecha = mayoresTJugadoresABB(jugadoresABB->derecha, edad);
       return mayor;
     } else {
