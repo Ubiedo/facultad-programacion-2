@@ -158,11 +158,14 @@ TJugadoresABB mayoresTJugadoresABB(TJugadoresABB jugadoresABB, nat edad) {
         mayor = mayoresTJugadoresABB(jugadoresABB->derecha, edad);
       } else {
         // hay que modificar la raiz al maxId del arbol izquierdo, y revisar si asi esta bien o hay que modificar algo para que quede como se supone en los test
-        TJugadoresABB raiz = new rep_jugadoresABB;
-        mayor->jugador = copiarTJugador(maxIdJugador(mayor));
-        removerTJugadoresABB(mayor, idTJugador(raiz->jugador));
-        mayor->izquierda = mayor;
-        mayor->derecha = mayoresTJugadoresABB(jugadoresABB->derecha, edad); // esta bien si me queda raiz->derecha == NULL y a la izquierda != NULL
+	if (mayor->derecha != NULL){
+	  TJugadoresABB raiz = new rep_jugadoresABB;
+	  raiz->jugador = copiarTJugador(maxIdJugador(mayor));
+	  removerTJugadoresABB(mayor, idTJugador(raiz->jugador));
+	  raiz->izquierda = mayor;
+	  mayor = raiz;
+	}
+	mayor->derecha = mayoresTJugadoresABB(jugadoresABB->derecha, edad);
       }
       return mayor;
     }
