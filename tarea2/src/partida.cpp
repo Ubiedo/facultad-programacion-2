@@ -75,7 +75,9 @@ TPartida copiarTPartida(TPartida partida){
       conector = copia;
       copiar = copiar->sig;
     }
-    copia->sig = NULL;
+    if (copia != NULL){
+      copia->sig = NULL;
+    }
   }
   return nueva;
 }

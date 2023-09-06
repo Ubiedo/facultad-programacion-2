@@ -81,20 +81,24 @@ void liberarTJugadoresLDE(TJugadoresLDE &jugadoresLDE){
 }
 
 void imprimirMayorAMenorTJugadoresLDE(TJugadoresLDE jugadores){
-  TNodo imprimir = jugadores->primero;
-  while (imprimir != NULL){
-    imprimirTJugador(imprimir->jugador);
-    imprimirTFecha(imprimir->fecha);
-    imprimir = imprimir->proximo;
+  if (jugadores != NULL){
+    TNodo imprimir = jugadores->primero;
+    while (imprimir != NULL){
+      imprimirTJugador(imprimir->jugador);
+      imprimirTFecha(imprimir->fecha);
+      imprimir = imprimir->proximo;
+    }
   }
 }
 
 void imprimirMenorAMayorTJugadoresLDE(TJugadoresLDE jugadores){
-  TNodo imprimir = jugadores->ultimo;
-  while (imprimir != NULL){
-    imprimirTJugador(imprimir->jugador);
-    imprimirTFecha(imprimir->fecha);
-    imprimir = imprimir->previo;
+  if (jugadores != NULL){
+    TNodo imprimir = jugadores->ultimo;
+    while (imprimir != NULL){
+      imprimirTJugador(imprimir->jugador);
+      imprimirTFecha(imprimir->fecha);
+      imprimir = imprimir->previo;
+    }
   }
 }
 
@@ -103,35 +107,42 @@ nat cantidadTJugadoresLDE(TJugadoresLDE jugadores){
 }
 
 void eliminarInicioTJugadoresLDE(TJugadoresLDE &jugadores){
-  TNodo liberar = jugadores->primero;
-  jugadores->primero = liberar->proximo;
-  if (liberar->proximo != NULL){
-    jugadores->primero->previo = NULL;
-  } else {
-    jugadores->ultimo = NULL;
+  if (jugadores != NULL && jugadores->primero != NULL){
+    TNodo liberar = jugadores->primero;
+    jugadores->primero = liberar->proximo;
+    if (liberar->proximo != NULL){
+      jugadores->primero->previo = NULL;
+    } else {
+      jugadores->ultimo = NULL;
+    }
+    jugadores->cantidad--;
+    liberarTNodo(liberar);
   }
-  jugadores->cantidad--;
-  liberarTNodo(liberar);
 }
 
 void eliminarFinalTJugadoresLDE(TJugadoresLDE &jugadores){
-  TNodo liberar = jugadores->ultimo;
-  jugadores->ultimo = liberar->previo;
-  if (liberar->previo != NULL){
-    jugadores->ultimo->proximo = NULL;
-  } else {
-    jugadores->primero = NULL;
+  if (jugadores != NULL && jugadores->ultimo != NULL){
+    TNodo liberar = jugadores->ultimo;
+    jugadores->ultimo = liberar->previo;
+    if (liberar->previo != NULL){
+      jugadores->ultimo->proximo = NULL;
+    } else {
+      jugadores->primero = NULL;
+    }
+    jugadores->cantidad--;
+    liberarTNodo(liberar);
   }
-  jugadores->cantidad--;
-  liberarTNodo(liberar);
 }
 
 bool estaEnTJugadoresLDE(TJugadoresLDE jugadores, nat id){ 
-  TNodo buscar = jugadores->primero;
-  while (buscar != NULL && idTJugador(buscar->jugador) != id){
-    buscar = buscar->proximo;
+  if (jugadores != NULL){
+    TNodo buscar = jugadores->primero;
+    while (buscar != NULL && idTJugador(buscar->jugador) != id){
+      buscar = buscar->proximo;
+    }
+    return buscar != NULL;
   }
-  return buscar != NULL;
+  return false;
 }
 
 TJugador obtenerTJugadorDeTJugadoresLDE(TJugadoresLDE jugadores, nat id){
@@ -152,15 +163,17 @@ TFecha obtenerTFechaDeTJugadoresLDE(TJugadoresLDE jugadores, nat id){
 
 TJugadoresLDE obtenerSegunTFecha(TJugadoresLDE jugadores, TFecha fecha){
   TJugadoresLDE encontrados = crearTJugadoresLDE();
-  TNodo buscar = jugadores->primero;
-  while (buscar != NULL && compararTFechas(buscar->fecha, fecha) != 0){
-    buscar = buscar->proximo;
-  }
-  while (buscar != NULL && compararTFechas(buscar->fecha, fecha) == 0){
-    TJugador jugadorCopiado = copiarTJugador(buscar->jugador);
-    TFecha fechaCopiada = copiarTFecha(buscar->fecha);
-    insertarTJugadoresLDE(encontrados, jugadorCopiado, fechaCopiada);
-    buscar = buscar->proximo;
+  if (jugadores != NULL){
+    TNodo buscar = jugadores->primero;
+    while (buscar != NULL && compararTFechas(buscar->fecha, fecha) != 0){
+      buscar = buscar->proximo;
+    }
+    while (buscar != NULL && compararTFechas(buscar->fecha, fecha) == 0){
+      TJugador jugadorCopiado = copiarTJugador(buscar->jugador);
+      TFecha fechaCopiada = copiarTFecha(buscar->fecha);
+      insertarTJugadoresLDE(encontrados, jugadorCopiado, fechaCopiada);
+      buscar = buscar->proximo;
+    }
   }
   return encontrados;
 }
@@ -182,7 +195,7 @@ TJugadoresLDE unirTJugadoresLDE(TJugadoresLDE &jugadores1, TJugadoresLDE &jugado
   } else {
     // ninguno es NULL, entonces hay que recorrer ambos y re hacer los vinculos
     TNodo buscarEn1 = jugadores1->primero, buscarEn2 = jugadores2->primero;
-    // fijamos el primero para ponerlo en mezcla->primero
+    // fijamos el primero para ponerlo en junta->primero
     if (compararTFechas(buscarEn1->fecha, buscarEn2->fecha) < 1){
       junta->primero = buscarEn2;
       buscarEn2 = buscarEn2->proximo;
