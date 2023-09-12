@@ -195,38 +195,37 @@ TJugadoresLDE unirTJugadoresLDE(TJugadoresLDE &jugadores1, TJugadoresLDE &jugado
   } else {
     // ninguno es NULL, entonces hay que recorrer ambos y re hacer los vinculos
     TNodo buscarEn1 = jugadores1->primero, buscarEn2 = jugadores2->primero;
-    // fijamos el primero para ponerlo en junta->primero
-    if (compararTFechas(buscarEn1->fecha, buscarEn2->fecha) < 1){
-      junta->primero = buscarEn2;
-      buscarEn2 = buscarEn2->proximo;
-    } else {
-      junta->primero = buscarEn1;
-      buscarEn1 = buscarEn1->proximo;
-    }
-    TNodo juntar = junta->primero;
+    TJugador copia = NULL;
+    TFecha copiar = NULL;
     while (buscarEn1 != NULL || buscarEn2 != NULL){
       if (buscarEn1 != NULL && buscarEn2 != NULL){
 	if (compararTFechas(buscarEn1->fecha, buscarEn2->fecha) < 1){
-	  juntar->proximo = buscarEn2;
-	  buscarEn2->previo = juntar;
+	  copia = copiarTJugador(buscarEn2->jugador);
+	  copiar = copiarTFecha(buscarEn2->fecha);
+	  insertarTJugadoresLDE(junta, copia, copiar);
 	  buscarEn2 = buscarEn2->proximo;
+	  eliminarInicioTJugadoresLDE(jugadores2);
 	} else {
-	  juntar->proximo = buscarEn1;
-	  buscarEn1->previo = juntar;
+	  copiar = copiarTFecha(buscarEn1->fecha);
+	  copia = copiarTJugador(buscarEn1->jugador);
+	  insertarTJugadoresLDE(junta, copia, copiar);
 	  buscarEn1 = buscarEn1->proximo;
+	  eliminarInicioTJugadoresLDE(jugadores1);
 	}
       } else if (buscarEn1 != NULL){
-	juntar->proximo = buscarEn1;
-	buscarEn1->previo = juntar;
+	copiar = copiarTFecha(buscarEn1->fecha);
+	copia = copiarTJugador(buscarEn1->jugador);
+	insertarTJugadoresLDE(junta, copia, copiar);
 	buscarEn1 = buscarEn1->proximo;
+	eliminarInicioTJugadoresLDE(jugadores1);
       } else {
-	juntar->proximo = buscarEn2;
-	buscarEn2->previo = juntar;
+	copiar = copiarTFecha(buscarEn2->fecha);
+	copia = copiarTJugador(buscarEn2->jugador);
+	insertarTJugadoresLDE(junta, copia, copiar);
 	buscarEn2 = buscarEn2->proximo;
+	eliminarInicioTJugadoresLDE(jugadores2);
       }
     }
-    junta->ultimo = juntar;
-    junta->cantidad = jugadores1->cantidad + jugadores2->cantidad;
   }
   if (jugadores1 != NULL){
     delete jugadores1;

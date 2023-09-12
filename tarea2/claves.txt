@@ -1,0 +1,6 @@
+7758f5198d4ffa205de81ee77e55f5a967a7b7c5  src/fecha.cpp
+39c7af350cc1beca426b9cc538c8ebedfdb77095  src/jugada.cpp
+6a8fe8a6ff36973cfadc0f9e8bfccec7f9b8dd93  src/partida.cpp
+1f5bf24878d545f59550f7fbb5c8904570535d7c  src/jugador.cpp
+60779e14e6b1e39ee3fa767fdbce63569b824655  src/jugadoresLDE.cpp
+ce213ada77adb298e91a46e84a93bf2bcd8f2e3e  src/jugadoresABB.cpp
