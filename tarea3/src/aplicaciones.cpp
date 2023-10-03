@@ -1,24 +1,38 @@
 #include "../include/aplicaciones.h"
 
 TPilaJugador menoresQueElResto(TJugadoresLDE lista) {
-    // ir de atras a adelante es mas facil
-    return NULL;
+  TPilaJugador apilado = crearTPilaJugador();
+  if (cantidadTJugadoresLDE(lista) > 0){
+    TJugador apilar = obtenerInicioDeTJugadoresLDE(lista);
+    apilarEnTPilaJugador(apilado, apilar);
+    eliminarInicioTJugadoresLDE(lista);
+    while (cantidadTJugadoresLDE(lista) > 0){ // mientras es > 0 hay elementos
+      apilar = obtenerInicioDeTJugadoresLDE(lista);
+      // comparo con los que estan
+      while (cantidadEnTPilaJugador(apilado) > 0 && edadTJugador(apilar) <= edadTJugador(cimaDeTPilaJugador(apilado))){
+	// hay que sacar a los de la pila que no son menores que el nuevo
+	desapilarDeTPilaJugador(apilado);
+      }
+      // lo agrego tras haber sacado a los que no cumplian lo pedido
+      apilarEnTPilaJugador(apilado, apilar);
+      eliminarInicioTJugadoresLDE(lista);
+    }
+  }
+  // retornamos la pila
+  return apilado;
 }
 
 bool sumaPares(nat k, TConjuntoIds c){
-  if (k >= 2*c->maximo || k <= 0 || c->cardinal < 2){
+  if (k >= 2*(cantMaxTConjuntoIds(c)) || k <= 0 || cardinalTConjuntoIds(c) < 2){
     return false;
   }
   // entonces es posible
-  if (k < c->maximo){
-    nat i = 1;
-    while (i < (k - 1)/2){
-      if (perteneceTConjuntoIds(i) && perteneceTConjuntoIds(k-i)){
-
-      }
-      i++;
+  nat i = 1;
+  while (i < cantMaxTConjuntoIds(c)){ // optimizar la condicion del while
+    if (perteneceTConjuntoIds(i, c) && perteneceTConjuntoIds(k-i, c) && i != (k-i)){
+      return true;
     }
-  } else {
-    nat i = c->maxmio;
+    i++;
   }
+  return false;
 }

@@ -32,17 +32,22 @@ void insertarTConjuntoIds(nat id, TConjuntoIds &c){
 }; 
 
 void borrarTConjuntoIds(nat id, TConjuntoIds &c){
-  c->elemento[id%c->maximo] = false;
-  c->cardinal--;
+  if (id > 0 && id <= c->maximo){
+    c->elemento[id%c->maximo] = false;
+    c->cardinal--;
+  }
 };
 
 bool perteneceTConjuntoIds(nat id, TConjuntoIds c){
+  if (id > 0 && id <= c->maximo){
     return c->elemento[id%c->maximo];
+  }
+  return false;
 };
 
 
 nat cardinalTConjuntoIds(TConjuntoIds c){
-    return c->cardinal;
+  return c->cardinal;
 };
 
 nat cantMaxTConjuntoIds(TConjuntoIds c){
@@ -58,11 +63,12 @@ void imprimirTConjuntoIds(TConjuntoIds c){
     }
     id++;
   }
+  printf("\n");
 };
 
 void liberarTConjuntoIds(TConjuntoIds &c){
   if (c != NULL){
-    delete c->elemento;
+    delete[] c->elemento;
     c->elemento = NULL;
     delete c;
     c = NULL;

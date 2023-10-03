@@ -164,7 +164,7 @@ insertarJugadorArbolJugadores
 crearJugada
 1 1 1 1 1
 agregarEnPartida
-crearJugador 25 25 Uruguay Noelia
+crearJugador 23 23 Uruguay Noelia
 insertarJugadorArbolJugadores
 
 crearJugada
