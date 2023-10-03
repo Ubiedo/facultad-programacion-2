@@ -1,6 +1,7 @@
 #include "../include/aplicaciones.h"
 
 TPilaJugador menoresQueElResto(TJugadoresLDE lista) {
+    // ir de atras a adelante es mas facil
     return NULL;
 }
 
