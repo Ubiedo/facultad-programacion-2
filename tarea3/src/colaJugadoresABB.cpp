@@ -44,14 +44,16 @@ nat cantidadEnTColaJugadoresABB(TColaJugadoresABB c) {
  }
 
 void encolarEnTColaJugadoresABB(TJugadoresABB t, TColaJugadoresABB &c) {
-  if (c != NULL)
-  {
     TArboles nuevo = new arboles;
     nuevo->arbol = t;
     nuevo->proximo = NULL;
-    c->ultimo->proximo = nuevo;
+    if (c->primero == NULL){
+      c->primero = nuevo;
+    } else {
+      c->ultimo->proximo = nuevo;
+    }
+    c->ultimo = nuevo;
     c->cantidad++;
-  }
 }
 
 TJugadoresABB frenteDeTColaJugadoresABB(TColaJugadoresABB c) { 

@@ -238,6 +238,7 @@ TJugadoresLDE unirTJugadoresLDE(TJugadoresLDE &jugadores1, TJugadoresLDE &jugado
   return junta;
 }
 
+
 ///////////////////////////////////
 ////// FIN CÓDIGO TAREA 2 //////
 ///////////////////////////////////

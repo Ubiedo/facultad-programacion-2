@@ -175,6 +175,7 @@ TJugadoresABB mayoresTJugadoresABB(TJugadoresABB jugadoresABB, nat edad) {
   return NULL;
 }
 
+
 ///////////////////////////////////
 ////// FIN CÓDIGO TAREA 2 //////
 ///////////////////////////////////
@@ -183,82 +184,132 @@ TJugadoresABB mayoresTJugadoresABB(TJugadoresABB jugadoresABB, nat edad) {
 /////////////  NUEVAS FUNCIONES  //////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 
-nat amplitudNivel(TColaJugadoresABB &nivel){
-    nat actual = cantidadEnTColaJugadoresABB(nivel);
-    while (actual > 0)
-    {
-        TJugadoresABB frente = frenteDeTColaJugadoresABB(nivel);
-        desencolarDeTColaJugadoresABB(nivel);
-        encolarEnTColaJugadoresABB(frente->derecha, nivel);
-        encolarEnTColaJugadoresABB(frente->izquierda, nivel);
+void descenderNivel(TColaJugadoresABB &nivel){
+  nat cantidad = cantidadEnTColaJugadoresABB(nivel);
+  TJugadoresABB frente = NULL;
+  while(cantidad > 0){
+    frente = frenteDeTColaJugadoresABB(nivel);
+    if (frente->izquierda != NULL){
+      encolarEnTColaJugadoresABB(frente->izquierda, nivel);
     }
-    return cantidadEnTColaJugadoresABB(nivel);
+    if(frente->derecha != NULL){
+      encolarEnTColaJugadoresABB(frente->derecha, nivel);
+    }
+    desencolarDeTColaJugadoresABB(nivel);
+    cantidad--;
+  }
 }
 
 nat amplitudTJugadoresABB(TJugadoresABB t) {
-    if (t != NULL)
-    {
-        // recorrido por niveles
-        TColaJugadoresABB nivel = crearTColaJugadoresABB();
-        encolarEnTColaJugadoresABB(t, nivel);
-        nat actual = 1, max = 1; // guarda la amplitud actual del nivel y la amplitud maxima hasta el momento
-        // bucle para hayar la cantidad de nodos en cada nivel
-        while (actual = amplitudNivel(nivel) > 0) // termina cuando ya no hayan nodos en el nivel
-        {
-            if (actual > max)
-            {
-                max = actual;
-            }
-        }
-        liberarTColaJugadoresABB(nivel); // libero la memoria del nivel
-        // devolver el maximo
-        return max;
+  if (t != NULL){
+    TColaJugadoresABB nivel = crearTColaJugadoresABB();
+    encolarEnTColaJugadoresABB(t, nivel);
+    nat maximo = 1, actual = 1;
+    // ir por cada nivel y hayar su amplitud
+    while (actual > 0){
+      descenderNivel(nivel);
+      actual = cantidadEnTColaJugadoresABB(nivel);
+      if (actual > maximo){
+	maximo = actual;
+      }
     }
-    return 0; // ya que no hay nodos
+    // liberar la memoria de nivel
+    liberarTColaJugadoresABB(nivel);
+    // devolver el maximo encontrado
+    return maximo;
+  }
+  return 0;
 }
 
-void niveles(TColaJugadoresABB &nivel, TColaJugadoresABB &arbol){
-    nat actual = cantidadEnTColaJugadoresABB(nivel);
-    while (actual > 0)
-    {
-        TJugadoresABB frente = frenteDeTColaJugadoresABB(nivel);
-        desencolarDeTColaJugadoresABB(nivel);
-        encolarEnTColaJugadoresABB(frente->derecha, nivel);
-        encolarEnTColaJugadoresABB(frente->izquierda, nivel);
-        encolarEnTColaJugadoresABB(frente, arbol);
+void apilar(TColaJugadoresABB &nivel, TPilaJugador &apilado){
+  nat cantidad = cantidadEnTColaJugadoresABB(nivel);
+  TJugadoresABB frente = NULL;
+  while(cantidad > 0){
+    frente = frenteDeTColaJugadoresABB(nivel);
+    if (frente->izquierda != NULL){
+      encolarEnTColaJugadoresABB(frente->izquierda, nivel);
     }
+    if(frente->derecha != NULL){
+      encolarEnTColaJugadoresABB(frente->derecha, nivel);
+    }
+    apilarEnTPilaJugador(apilado, frente->jugador);
+    desencolarDeTColaJugadoresABB(nivel);
+    cantidad--;
+  }
+}
+
+TPilaJugador invertir(TPilaJugador &apilado){
+  TPilaJugador invertido = crearTPilaJugador();
+  while (cantidadEnTPilaJugador(apilado) > 0){
+    apilarEnTPilaJugador(invertido, cimaDeTPilaJugador(apilado));
+    desapilarDeTPilaJugador(apilado);
+  }
+  liberarTPilaJugador(apilado);
+  return invertido;
 }
 
 TPilaJugador serializarTJugadoresABB(TJugadoresABB t) {
-    if (t != NULL)
-    {
-        // recorrido por niveles y agregado a la pila, no comparte memoria
-        TPilaJugador apilado = crearTPilaJugador();
-        TColaJugadoresABB nivel = crearTColaJugadoresABB(), arbol = crearTColaJugadoresABB();
-        encolarEnTColaJugadoresABB(t, nivel);
-        apilarEnTPilaJugador(apilado, copiarTJugador(t->jugador));
-        nat nodos = 1;
-        // recorrido por niveles y agregar a la pila
-        while (nodos = cantidadEnTColaJugadoresABB(nivel) > 0) // termina cuando ya no hayan nodos en el nivel
-        {
-            niveles(nivel, arbol);
-        }
-        // devuelvo la pila
-        return apilado;
-    }    
-    return crearTPilaJugador(); // pila vacia o NULL?
+  TPilaJugador apilado = crearTPilaJugador();
+  if (t != NULL){
+    TColaJugadoresABB nivel = crearTColaJugadoresABB();
+    encolarEnTColaJugadoresABB(t, nivel);
+    while (cantidadEnTColaJugadoresABB(nivel) > 0){
+      apilar(nivel, apilado);
+    }
+    // liberamos la memoria del nivel
+    liberarTColaJugadoresABB(nivel);
+    // devolvemos la pila invertida para que quede en el orden correcto
+    return invertir(apilado);
+  }
+  return apilado;
+}
+
+void adoptar(TColaJugadoresABB &padres, TPilaJugador &p, bool nexo){
+  // hayamos al padre y lo sacamos de la lista de padres a la espera de hijos
+  TJugadoresABB padre = frenteDeTColaJugadoresABB(padres);
+  // creamos el nodo para el hijo
+  TJugadoresABB hijo = new rep_jugadoresABB;
+  hijo->jugador = copiarTJugador(cimaDeTPilaJugador(p));
+  hijo->izquierda = NULL;
+  hijo->derecha = NULL;
+  if (nexo){
+    padre->izquierda = hijo;
+  } else {
+    padre->derecha = hijo;
+  }
+  // agregamos al hijo a la lista de posibles padres
+  encolarEnTColaJugadoresABB(hijo, padres);
+  desapilarDeTPilaJugador(p); // lo sacamos de la pila de hijos sin padre
 }
 
 TJugadoresABB deserializarTJugadoresABB(TPilaJugador &p) {
-    if (cantidadEnTPilaJugador(p) > 0)
-    {
-        TJugadoresABB raiz = NULL;
-        // van en mod 2
-
-        // devuelvo la raiz del arbol
-        return raiz;
+  TJugadoresABB raiz = NULL;
+  if (cantidadEnTPilaJugador(p) > 0){
+    // como hay un elemento al menos, creamos la raiz
+    raiz = new rep_jugadoresABB;
+    raiz->jugador = copiarTJugador(cimaDeTPilaJugador(p));
+    raiz->izquierda = NULL;
+    raiz->derecha = NULL;
+    desapilarDeTPilaJugador(p); // lo sacamos de la pila de hijos ya que es la raiz
+    // creamos una cola para saber a quien le hay que agregar los hijos
+    TColaJugadoresABB padres = crearTColaJugadoresABB();
+    encolarEnTColaJugadoresABB(raiz, padres);
+    // asignamos cada dupla de hijos a los padres
+    while (cantidadEnTPilaJugador(p) > 1){ // entonces quedan ambos hijos que asignar
+      adoptar(padres, p, true);
+      adoptar(padres, p, false);
+      // sacamos al padre de la lista de padres sin hijos
+      desencolarDeTColaJugadoresABB(padres);
     }
-    return NULL;
+    // si queda un hijo va con el padre del frente
+    if(cantidadEnTPilaJugador(p) > 0){
+      adoptar(padres, p, true);
+    }
+    // liberamos la fila de padres y la pila de hijos vacia
+    liberarTPilaJugador(p);
+    liberarTColaJugadoresABB(padres);
+  }
+  return raiz;
 }
 
 

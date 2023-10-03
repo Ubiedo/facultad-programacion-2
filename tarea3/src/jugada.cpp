@@ -38,19 +38,14 @@ void imprimirTJugada(TJugada jugada) {
   printf("Movimientos: ");
   for (int i = 0; i < 4; i++){
     //Derecha = 1, Izquierda = 2, Arriba = 3, Abajo = 4
-    switch(jugada->movimientos[i]){
-    case Derecha:
-    printf("Derecha ");
-    break;
-    case Izquierda:
+    if (jugada->movimientos[i] == Derecha){
+      printf("Derecha ");
+    } else if (jugada->movimientos[i] == Izquierda){
       printf("Izquierda ");
-      break;
-    case Arriba:
-    printf("Arriba ");
-    break;
-    case Abajo:
+    } else if (jugada->movimientos[i] == Arriba){
+      printf("Arriba ");
+    } else {
       printf("Abajo ");
-      break;
     }
   }
   printf("\n");
