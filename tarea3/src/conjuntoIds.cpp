@@ -15,16 +15,17 @@ TConjuntoIds crearTConjuntoIds(nat cantMax){
   }
   conjunto->maximo = cantMax;
   conjunto->cardinal = 0;
+  return conjunto;
 };
 
 
 bool esVacioTConjuntoIds(TConjuntoIds c){
-    return conjunto->cardinal == 0;
+  return c->cardinal == 0;
 };
 
 
 void insertarTConjuntoIds(nat id, TConjuntoIds &c){
-  if (id > 0 && id =< c->maximo){
+  if (id > 0 && id <= c->maximo){
     c->elemento[id%c->maximo] = true;
     c->cardinal++;
   }
@@ -50,7 +51,7 @@ nat cantMaxTConjuntoIds(TConjuntoIds c){
 
 void imprimirTConjuntoIds(TConjuntoIds c){
   nat id = 1, impresos = 0;
-  while (id <= c->maximo && impresos != c->cantidad){
+  while (id <= c->maximo && impresos != c->cardinal){
     if (c->elemento[id%c->maximo]){
       printf("%d ", id);
       impresos++;
@@ -79,7 +80,7 @@ TConjuntoIds unionTConjuntoIds(TConjuntoIds c1, TConjuntoIds c2){
     if (c1->elemento[id%c1->maximo] && c2->elemento[id%c1->maximo]){
       insertarTConjuntoIds(id, mezcla);
       restantes-=2;
-    } elif (c1->elemento[id%c1->maximo] || c2->elemento[id%c1->maximo]){
+    } else if (c1->elemento[id%c1->maximo] || c2->elemento[id%c1->maximo]){
       insertarTConjuntoIds(id, mezcla);
       restantes--;
     }
@@ -118,7 +119,7 @@ TConjuntoIds diferenciaTConjuntoIds(TConjuntoIds c1, TConjuntoIds c2){
   while (restantes > 0){
     if (c1->elemento[id%c1->maximo]){
       if (!(c2->elemento[id%c1->maximo])){
-	insertarTConjuntoIds(id, interseccion);
+	insertarTConjuntoIds(id, diferencia);
       }
       restantes--;
     }

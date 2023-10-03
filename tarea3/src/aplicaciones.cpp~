@@ -12,12 +12,6 @@ bool sumaPares(nat k, TConjuntoIds c){
   // entonces es posible
   if (k < c->maximo){
     nat i = 1;
-    while (i < (k - 1)/2){
-      if (perteneceTConjuntoIds(i) && perteneceTConjuntoIds(k-i)){
-
-      }
-      i++;
-    }
   } else {
     nat i = c->maxmio;
   }
