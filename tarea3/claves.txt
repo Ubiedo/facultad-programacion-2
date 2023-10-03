@@ -1,0 +1,10 @@
+00865b7418e3dbf524825ede2a2e4f439aff841e  src/fecha.cpp
+39c7af350cc1beca426b9cc538c8ebedfdb77095  src/jugada.cpp
+1f5bf24878d545f59550f7fbb5c8904570535d7c  src/jugador.cpp
+6a8fe8a6ff36973cfadc0f9e8bfccec7f9b8dd93  src/partida.cpp
+21950bb351296e628986aa51b9a1cc8d4aa3eb81  src/jugadoresLDE.cpp
+3872a38202f3834fd9267bff42d5e259759d1f83  src/jugadoresABB.cpp
+7fc6b4f62bf8337b2aaac87f4629926b67754af8  src/pilaJugador.cpp
+95d682dc79614edaf90afbfcf9413acbf986c90b  src/colaJugadoresABB.cpp
+1095e2b694b1227065f9fd13ff175154b957c9c1  src/conjuntoIds.cpp
+0b4b5cea76d2c7aba173b78d71566f659edf8a7f  src/aplicaciones.cpp
