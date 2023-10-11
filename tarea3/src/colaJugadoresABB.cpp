@@ -39,7 +39,8 @@ void liberarTColaJugadoresABB(TColaJugadoresABB &c) {
   }
 }
 
-nat cantidadEnTColaJugadoresABB(TColaJugadoresABB c) { 
+nat cantidadEnTColaJugadoresABB(TColaJugadoresABB c) {
+  // chequear que no sea NULL?
   return c->cantidad;
  }
 

@@ -20,7 +20,7 @@ TConjuntoIds crearTConjuntoIds(nat cantMax){
 
 
 bool esVacioTConjuntoIds(TConjuntoIds c){
-  return c->cardinal == 0;
+  return (c != NULL && c->cardinal == 0);
 };
 
 
