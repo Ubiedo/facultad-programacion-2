@@ -39,19 +39,22 @@ void liberarTColaJugadoresABB(TColaJugadoresABB &c) {
   }
 }
 
-nat cantidadEnTColaJugadoresABB(TColaJugadoresABB c) { 
+nat cantidadEnTColaJugadoresABB(TColaJugadoresABB c) {
+  // chequear que no sea NULL?
   return c->cantidad;
  }
 
 void encolarEnTColaJugadoresABB(TJugadoresABB t, TColaJugadoresABB &c) {
-  if (c != NULL)
-  {
     TArboles nuevo = new arboles;
     nuevo->arbol = t;
     nuevo->proximo = NULL;
-    c->ultimo->proximo = nuevo;
+    if (c->primero == NULL){
+      c->primero = nuevo;
+    } else {
+      c->ultimo->proximo = nuevo;
+    }
+    c->ultimo = nuevo;
     c->cantidad++;
-  }
 }
 
 TJugadoresABB frenteDeTColaJugadoresABB(TColaJugadoresABB c) { 

@@ -49,12 +49,12 @@ void insertarTJugadoresLDE(TJugadoresLDE &jugadores, TJugador &jugador, TFecha &
       TNodo ubicacion = jugadores->primero->proximo;
       // entonces va entre dos nodos
       while (compararTFechas(ubicacion->fecha, fecha) > 0){
-	ubicacion = ubicacion->proximo;
+	      ubicacion = ubicacion->proximo;
       }
-      nuevo->proximo = ubicacion->proximo;
-      ubicacion->proximo = nuevo;
-      nuevo->previo = ubicacion;
-      nuevo->proximo->previo = nuevo;
+      nuevo->proximo = ubicacion;
+      ubicacion->previo->proximo = nuevo;
+      nuevo->previo = ubicacion->previo;
+      ubicacion->previo = nuevo;
     }
   }
   jugadores->cantidad++;
@@ -248,7 +248,7 @@ TJugador obtenerInicioDeTJugadoresLDE(TJugadoresLDE jugadores){
 
 void eliminarJugadorConNombreTJugadoresLDE(TJugadoresLDE &jugador, const char nombre[100]){
   TNodo buscar = jugador->primero;
-  while (nombreTJugador(buscar->jugador) != nombre)
+  while (strcmp(nombreTJugador(buscar->jugador), nombre) != 0)
   {
     buscar = buscar->proximo;
   }
@@ -274,7 +274,7 @@ void eliminarJugadorConNombreTJugadoresLDE(TJugadoresLDE &jugador, const char no
 
 bool estaJugadorConNombreEnTJugadoresLDE(TJugadoresLDE jugador, const char nombre[100]){
   TNodo buscar = jugador->primero;
-  while (buscar != NULL && nombreTJugador(buscar->jugador) != nombre)
+  while (buscar != NULL && strcmp(nombreTJugador(buscar->jugador), nombre) != 0)
   {
     buscar = buscar->proximo;
   }
@@ -283,7 +283,7 @@ bool estaJugadorConNombreEnTJugadoresLDE(TJugadoresLDE jugador, const char nombr
 
 TJugador obtenerJugadorConNombreTJugadoresLDE(TJugadoresLDE jugador, const char nombre[100]){
   TNodo buscar = jugador->primero;
-    while (nombreTJugador(buscar->jugador) != nombre)
+    while (strcmp(nombreTJugador(buscar->jugador), nombre) != 0)
     {
       buscar = buscar->proximo;
     }

@@ -23,15 +23,11 @@ TPilaJugador crearTPilaJugador() {
 void liberarTPilaJugador(TPilaJugador &p) {
   if (p != NULL)
   {
-    TElementos aBorrar = NULL;
     while (p->cantidad > 0)
     {
-      liberarTJugador(p->pila->jugador);
-      aBorrar = p->pila;
-      p->pila = p->pila->proximo;
-      delete aBorrar;
-      p->cantidad--;
+      desapilarDeTPilaJugador(p);
     }
+    p->pila = NULL;
     delete p;
     p = NULL;
   }
@@ -46,6 +42,7 @@ void apilarEnTPilaJugador(TPilaJugador &p, TJugador jugador) {
   elemento->proximo = p->pila;
   elemento->jugador = copiarTJugador(jugador);
   p->pila = elemento;
+  p->cantidad++;
 }
 
 TJugador cimaDeTPilaJugador(TPilaJugador p) { 

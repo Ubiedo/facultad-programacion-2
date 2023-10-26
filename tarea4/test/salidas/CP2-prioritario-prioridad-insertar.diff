@@ -1,0 +1,56 @@
+16c16
+< 23>Jugador 25: Luis, Uruguay, 18 años
+---
+> 23>Jugador 5: Juan, Uruguay, 21 años
+18,22c18
+< Movimientos: Derecha Derecha Derecha Derecha 
+< Jugada: 2 
+< Movimientos: Izquierda Izquierda Izquierda Izquierda 
+< Jugada: 3 
+< Movimientos: Izquierda Arriba Abajo Abajo 
+---
+> Movimientos: Derecha Izquierda Arriba Abajo 
+33c29
+< 37>Jugador 25: Luis, Uruguay, 18 años
+---
+> 37>Jugador 5: Juan, Uruguay, 21 años
+35,39c31
+< Movimientos: Derecha Derecha Derecha Derecha 
+< Jugada: 2 
+< Movimientos: Izquierda Izquierda Izquierda Izquierda 
+< Jugada: 3 
+< Movimientos: Izquierda Arriba Abajo Abajo 
+---
+> Movimientos: Derecha Izquierda Arriba Abajo 
+49c41
+< 50>Jugador 6: Juan, Uruguay, 16 años
+---
+> 50>Jugador 5: Juan, Uruguay, 21 años
+53c45
+< 52>La prioridad del jugador es 16.
+---
+> 52>La prioridad del jugador es 21.
+91c83
+< 114>Jugador 8: Martin, Argentina, 14 años
+---
+> 114>Jugador 3: Francisco, Holanda, 29 años
+93,97c85
+< Movimientos: Abajo Derecha Arriba Derecha 
+< Jugada: 2 
+< Movimientos: Izquierda Derecha Izquierda Arriba 
+< Jugada: 3 
+< Movimientos: Izquierda Arriba Derecha Derecha 
+---
+> Movimientos: Abajo Abajo Abajo Izquierda 
+99c87
+< 116>La prioridad del jugador es 14.
+---
+> 116>La prioridad del jugador es 29.
+103c91
+< 120>La prioridad del jugador es 20.
+---
+> 120>La prioridad del jugador es 29.
+107c95
+< 124>La prioridad del jugador es 15.
+---
+> 124>La prioridad del jugador es 29.
