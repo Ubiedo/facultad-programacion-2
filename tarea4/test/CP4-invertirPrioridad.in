@@ -1,0 +1,195 @@
+# implementar invertirPrioridad
+
+crearColaPrioridad 10
+
+# creo Jugador 5 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 5 21 Uruguay Juan
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 6 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 6 22 Uruguay Juan
+imprimirJugador
+insertarColaPrioridad
+
+# el prioritario es el Jugador 5
+imprimirJugadorPrioritario
+
+# elimino el jugador prioritario 2 veces y la cola queda vacia
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+estaVaciaColaPrioridad
+
+# invierto la prioridad de la cola, la edad mayor es prioritaria
+invertirPrioridad
+
+# creo Jugador 5 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 5 21 Uruguay Juan
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 6 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 6 22 Uruguay Juan
+imprimirJugador
+insertarColaPrioridad
+
+
+# ahora el prioritario es el Jugador 6
+imprimirJugadorPrioritario
+
+# creo Jugador 3 y agrego a cola
+crearPartida
+crearJugada
+1 4 4 4 2
+agregarEnPartida
+crearJugador 3 29 Holanda Francisco
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 2 y agrego a cola
+crearPartida
+crearJugada
+1 1 3 3 2
+agregarEnPartida
+crearJugador 2 25 Mexico Matias
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 10 y agrego a cola
+crearPartida
+crearJugada
+1 4 2 4 4
+agregarEnPartida
+crearJugador 10 32 Uruguay Vanessa
+imprimirJugador
+insertarColaPrioridad
+
+# el prioritario es el jugador 10
+imprimirJugadorPrioritario
+
+# la edad prioritaria del jugador 10 es 32
+imprimirPrioridadJugador 10
+
+# la edad prioritaria del jugador 5 es 21
+imprimirPrioridadJugador 5
+
+# elimino el jugador prioritario y verifico
+eliminarJugadorPrioritario
+estaJugadorEnColaPrioridad 10
+
+# ahora el prioritario es el jugador 3
+imprimirJugadorPrioritario
+
+# elimino 3 veces el prioritario y verifico que la cola no es vacía
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+estaVaciaColaPrioridad
+
+# elimino una mas y ahora si es vacia
+eliminarJugadorPrioritario
+estaVaciaColaPrioridad
+
+# invierto nuevamente la prioridad y agrego los jugadores nuevamente
+invertirPrioridad
+
+# creo Jugador 5 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 5 21 Uruguay Juan
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 6 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 6 22 Uruguay Juan
+imprimirJugador
+insertarColaPrioridad
+
+# ahora el prioritario es el Jugador 5
+imprimirJugadorPrioritario
+
+# creo Jugador 3 y agrego a cola
+crearPartida
+crearJugada
+1 4 4 4 2
+agregarEnPartida
+crearJugador 3 29 Holanda Francisco
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 2 y agrego a cola
+crearPartida
+crearJugada
+1 1 3 3 2
+agregarEnPartida
+crearJugador 2 18 Mexico Matias
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 10 y agrego a cola
+crearPartida
+crearJugada
+1 4 2 4 4
+agregarEnPartida
+crearJugador 10 32 Uruguay Vanessa
+imprimirJugador
+insertarColaPrioridad
+
+# ahora el prioritario es el jugador 2
+imprimirJugadorPrioritario
+
+# invierto la prioridad en una cola con elementos, debe modificar la cola y el prioritario es el Jugador 10
+invertirPrioridad
+imprimirJugadorPrioritario
+
+# elimino el Jugador prioritario y ahora el nuevo prioritario es 3
+eliminarJugadorPrioritario
+imprimirJugadorPrioritario
+
+# la edad de prioridad de 3 es 29
+imprimirPrioridadJugador 3
+
+# voy eliminando y verificando, el orden es 6, 5, y 2 
+
+eliminarJugadorPrioritario
+imprimirJugadorPrioritario
+
+eliminarJugadorPrioritario
+imprimirJugadorPrioritario
+
+eliminarJugadorPrioritario
+imprimirJugadorPrioritario
+
+# queda un elemento en la cola
+estaVaciaColaPrioridad
+
+eliminarJugadorPrioritario
+
+# ahora la cola esta vacia
+estaVaciaColaPrioridad
+
+liberarColaPrioridad
+
+Fin

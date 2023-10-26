@@ -1,0 +1,51 @@
+# se asume un ID máximo de persona de 10
+
+crearTTablaJugadores 20
+
+# Persona jugador5 5, 13 años
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 5 13 Uruguay jugador5
+crearFecha 1/12/2022
+insertarJugadorEnTabla
+
+# Persona jugador6 6, 19 años
+crearJugada
+1 4 3 2 1
+agregarEnPartida
+crearJugador 6 19 Brasil jugador6
+crearFecha 5/12/2022
+insertarJugadorEnTabla
+
+# Persona jugador3 3, 21 años
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 3 21 Uruguay jugador3
+crearFecha 1/1/2023
+insertarJugadorEnTabla
+
+# Persona jugador2 2, 7 años
+crearJugada
+1 2 2 2 2
+agregarEnPartida
+crearJugador 2 7 Uruguay jugador2
+crearFecha 30/11/2022
+insertarJugadorEnTabla
+
+# Persona jugador10 10, 15 años
+crearJugada
+1 3 3 3 3
+agregarEnPartida
+crearJugador 10 15 Uruguay jugador10
+crearFecha 30/10/2022
+insertarJugadorEnTabla
+
+
+# el orden debe ser jugador2, jugador6 y jugador3
+listarEnOrden 3 jugador6 jugador3 jugador2
+
+liberarTTablaJugadores
+
+Fin

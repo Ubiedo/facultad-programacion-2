@@ -1,0 +1,67 @@
+# implementar crearCP, liberarCP, estaVaciaCP, estaEnCP, insertarEnCP
+
+crearColaPrioridad 11
+
+# chequeo con cola vacía
+estaVaciaColaPrioridad
+estaJugadorEnColaPrioridad 5
+
+# creo Jugador 5 para ser mas prioritario
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 5 21 Uruguay Juan
+imprimirJugador
+
+# inserto el jugador en la cola
+insertarColaPrioridad
+
+# ahora la cola no está vacía
+estaVaciaColaPrioridad
+
+# chequeo varios jugadores en la cola
+estaJugadorEnColaPrioridad 5
+estaJugadorEnColaPrioridad 6
+estaJugadorEnColaPrioridad 11
+estaJugadorEnColaPrioridad 0
+
+# creo Jugador 1 para ser segunda en prioridad
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 1 28 Uruguay Juan
+imprimirJugador
+
+# inserto en cola
+insertarColaPrioridad
+
+# creo Jugador 11 para ser igual en prioridad a anterior
+crearPartida
+crearJugada
+1 4 3 2 1
+agregarEnPartida
+crearJugada
+2 2 2 3 4
+agregarEnPartida
+crearJugada
+3 3 2 2 1
+agregarEnPartida
+crearJugador 11 28 Brasil Roberto
+imprimirJugador
+
+
+# inserto en cola
+insertarColaPrioridad
+
+# testeo varios jugadores en cola
+estaJugadorEnColaPrioridad 5
+estaJugadorEnColaPrioridad 6
+estaJugadorEnColaPrioridad 11
+estaJugadorEnColaPrioridad 1
+estaJugadorEnColaPrioridad 0
+
+liberarColaPrioridad
+
+Fin

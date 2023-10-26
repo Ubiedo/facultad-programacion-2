@@ -1,0 +1,68 @@
+1>#  creo una tabla de tamanio 5.
+2>3>#  creo un jugador Juan y la inserto en la tabla.
+4>#  Juan.
+5>6>7>8>9>10>11>12>13>#  creo un jugador Maria y la inserto en la tabla.
+14>#  Maria.
+15>16>17>18>19>20>21>22>23>24>25>26>27>#  imprimo la tabla (se imprime primero a María y luego a Juan).
+28>Jugador 1: Maria, Chile, 74 años
+Jugada: 4 
+Movimientos: Arriba Izquierda Derecha Derecha 
+Jugada: 21 
+Movimientos: Arriba Derecha Arriba Izquierda 
+Jugada: 24 
+Movimientos: Derecha Arriba Izquierda Derecha 
+Jugada: 31 
+Movimientos: Derecha Abajo Izquierda Izquierda 
+7/4/1983
+Jugador 10: Juan, Uruguay, 23 años
+Jugada: 4 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugada: 5 
+Movimientos: Arriba Derecha Izquierda Arriba 
+12/3/2023
+29>#  libero la tabla.
+30>31># 
+.
+32># 
+.
+33># 
+.
+34># 
+.
+35>#  creo una tabla de tamanio 5.
+36>37>#  creo un jugador Juan y la inserto en la tabla.
+38>#  Juan.
+39>40>41>42>43>44>45>46>47>#  creo un jugador maria y la inserto en la tabla.
+48>#  maria.
+49>50>51>52>53>54>55>56>57>58>59>60>61>#  creo un jugador ariam y la inserto en la tabla.
+62>#  como ariam tiene las mismas letras que maria se produce una colision.
+63>#  ariam.
+64>65>66>67>68>69>70>71>72>73>74>75>76>#  imprimo la tabla (se imprimen en orden: ariam, maria y juan, ya que ariam tiene fecha mayor que maria).
+77>Jugador 6: ariam, Peru, 4 años
+Jugada: 1 
+Movimientos: Izquierda Arriba Derecha Izquierda 
+Jugada: 4 
+Movimientos: Abajo Derecha Izquierda Derecha 
+Jugada: 4 
+Movimientos: Izquierda Derecha Arriba Izquierda 
+Jugada: 53 
+Movimientos: Izquierda Arriba Derecha Izquierda 
+7/4/1984
+Jugador 2: maria, Chile, 4 años
+Jugada: 4 
+Movimientos: Arriba Izquierda Derecha Derecha 
+Jugada: 21 
+Movimientos: Arriba Derecha Arriba Izquierda 
+Jugada: 24 
+Movimientos: Derecha Arriba Izquierda Derecha 
+Jugada: 31 
+Movimientos: Derecha Abajo Izquierda Izquierda 
+7/4/1983
+Jugador 10: Juan, Uruguay, 23 años
+Jugada: 4 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugada: 5 
+Movimientos: Arriba Derecha Izquierda Arriba 
+12/3/2023
+78>#  libero la tabla.
+79>80>Fin.

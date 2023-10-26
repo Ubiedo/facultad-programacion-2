@@ -1,0 +1,207 @@
+# creo una tabla de tamanio 10
+crearTTablaJugadores 10
+
+# creo 10 jugadores, los inserto en la tabla, verifico que pertenezcan y los obtengo
+# 1
+crearPartida
+
+crearJugada
+3 1 2 3 1
+agregarEnPartida
+
+crearJugada
+4 1 2 3 4
+agregarEnPartida
+
+crearJugador 1 11 Uruguay Jugador1
+crearFecha 1/11/2022
+insertarJugadorEnTabla
+
+perteneceATTablaJugadores Jugador1
+obtenerJugadorDeTTablaJugadores Jugador1
+
+# 2
+crearPartida
+
+crearJugada
+4 1 2 3 1
+agregarEnPartida
+
+crearJugada
+2 1 3 4 2
+agregarEnPartida
+
+crearJugador 2 22 Uruguay Jugador2
+crearFecha 1/11/2011
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador2
+obtenerJugadorDeTTablaJugadores Jugador2
+
+# 3
+crearPartida
+
+crearJugada
+1 4 1 4 1
+agregarEnPartida
+
+crearJugada
+4 1 2 3 4
+agregarEnPartida
+
+crearJugador 3 33 Uruguay Jugador3
+crearFecha 2/11/2001
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador3
+obtenerJugadorDeTTablaJugadores Jugador3
+
+# 4
+crearPartida
+
+crearJugada
+3 1 2 3 1
+agregarEnPartida
+
+crearJugada
+4 1 2 3 4
+agregarEnPartida
+
+crearJugador 4 44 Uruguay Jugador4
+crearFecha 4/11/1999
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador4
+obtenerJugadorDeTTablaJugadores Jugador4
+
+# 5
+crearPartida
+
+crearJugada
+1 1 2 3 1
+agregarEnPartida
+
+crearJugada
+4 1 1 3 1
+agregarEnPartida
+
+crearJugador 5 55 Uruguay Jugador5
+crearFecha 5/1/1998
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador5
+obtenerJugadorDeTTablaJugadores Jugador5
+
+# 6
+crearPartida
+
+crearJugada
+1 2 2 3 1
+agregarEnPartida
+
+crearJugada
+2 1 2 2 4
+agregarEnPartida
+
+crearJugador 6 66 Uruguay Jugador6
+crearFecha 6/12/1997
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador6
+obtenerJugadorDeTTablaJugadores Jugador6
+
+# 7
+crearPartida
+
+crearJugada
+3 1 2 3 1
+agregarEnPartida
+
+crearJugada
+4 1 2 3 4
+agregarEnPartida
+
+crearJugador 7 77 Uruguay Jugador7
+crearFecha 7/7/1996
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador7
+obtenerJugadorDeTTablaJugadores Jugador7
+
+# 8
+crearPartida
+
+crearJugada
+3 3 3 3 3
+agregarEnPartida
+
+crearJugada
+4 4 4 4 4
+agregarEnPartida
+
+crearJugador 8 88 Uruguay Jugador8
+crearFecha 1/11/1995
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador8
+obtenerJugadorDeTTablaJugadores Jugador8
+
+# 9
+crearPartida
+
+crearJugada
+2 1 1 3 1
+agregarEnPartida
+
+crearJugada
+1 4 2 3 4
+agregarEnPartida
+
+crearJugador 9 19 Uruguay Jugador9
+crearFecha 1/11/1994
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador9
+obtenerJugadorDeTTablaJugadores Jugador9
+
+# 10
+crearPartida
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+
+crearJugada
+5 2 2 4 4
+agregarEnPartida
+
+crearJugador 10 10 Uruguay Jugador10
+crearFecha 1/11/1993
+
+insertarJugadorEnTabla
+perteneceATTablaJugadores Jugador10
+obtenerJugadorDeTTablaJugadores Jugador10
+
+# imprimo la tabla
+imprimirTTablaJugadores
+
+
+# elimino los jugadores de id par y verifico que no pertenecen
+eliminarJugadorDeTTablaJugadores Jugador2
+perteneceATTablaJugadores Jugador2
+eliminarJugadorDeTTablaJugadores Jugador4
+perteneceATTablaJugadores Jugador4
+eliminarJugadorDeTTablaJugadores Jugador6
+perteneceATTablaJugadores Jugador6
+eliminarJugadorDeTTablaJugadores Jugador8
+perteneceATTablaJugadores Jugador8
+eliminarJugadorDeTTablaJugadores Jugador10
+perteneceATTablaJugadores Jugador10
+
+# imprimo la tabla 
+imprimirTTablaJugadores
+
+# libero la tabla
+liberarTTablaJugadores
+
+Fin

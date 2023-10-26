@@ -1,0 +1,17 @@
+1>#  se asume un ID máximo de persona de 10.
+2>3>#  Persona jugador5 5, 13 años.
+4>5>6>7>8>9>#  Persona jugador6 6, 19 años.
+10>11>12>13>14>15>#  Persona jugador3 3, 21 años.
+16>17>18>19>20>21>#  Persona jugador2 2, 7 años.
+22>23>24>25>26>27>#  Persona jugador10 10, 15 años.
+28>29>30>31>32>33>#  el orden debe ser jugador2, jugador6 y jugador3.
+34>Jugador 2: jugador2, Uruguay, 7 años
+Jugada: 1 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugador 6: jugador6, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+Jugador 3: jugador3, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+35>36>Fin.

@@ -1,0 +1,112 @@
+1>#  implementar invertirPrioridad.
+2>3>#  creo Jugador 5 y agrego a cola.
+4>5>6>7>8>Jugador 5: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+9>10>#  creo Jugador 6 y agrego a cola.
+11>12>13>14>15>Jugador 6: Juan, Uruguay, 22 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+16>17>#  el prioritario es el Jugador 5.
+18>Jugador 5: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+19>#  elimino el jugador prioritario 2 veces y la cola queda vacia.
+20>21>22>La cola de prioridad está vacía.
+23>#  invierto la prioridad de la cola, la edad mayor es prioritaria.
+24>25>#  creo Jugador 5 y agrego a cola.
+26>27>28>29>30>Jugador 5: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+31>32>#  creo Jugador 6 y agrego a cola.
+33>34>35>36>37>Jugador 6: Juan, Uruguay, 22 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+38>39>#  ahora el prioritario es el Jugador 6.
+40>Jugador 6: Juan, Uruguay, 22 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+41>#  creo Jugador 3 y agrego a cola.
+42>43>44>45>46>Jugador 3: Francisco, Holanda, 29 años
+Jugada: 1 
+Movimientos: Abajo Abajo Abajo Izquierda 
+47>48>#  creo Jugador 2 y agrego a cola.
+49>50>51>52>53>Jugador 2: Matias, Mexico, 25 años
+Jugada: 1 
+Movimientos: Derecha Arriba Arriba Izquierda 
+54>55>#  creo Jugador 10 y agrego a cola.
+56>57>58>59>60>Jugador 10: Vanessa, Uruguay, 32 años
+Jugada: 1 
+Movimientos: Abajo Izquierda Abajo Abajo 
+61>62>#  el prioritario es el jugador 10.
+63>Jugador 10: Vanessa, Uruguay, 32 años
+Jugada: 1 
+Movimientos: Abajo Izquierda Abajo Abajo 
+64>#  la edad prioritaria del jugador 10 es 32.
+65>La prioridad del jugador es 32.
+66>#  la edad prioritaria del jugador 5 es 21.
+67>La prioridad del jugador es 21.
+68>#  elimino el jugador prioritario y verifico.
+69>70>El jugador 10 no está en la cola de prioridad.
+71>#  ahora el prioritario es el jugador 3.
+72>Jugador 3: Francisco, Holanda, 29 años
+Jugada: 1 
+Movimientos: Abajo Abajo Abajo Izquierda 
+73>#  elimino 3 veces el prioritario y verifico que la cola no es vacía.
+74>75>76>77>La cola de prioridad no está vacía.
+78>#  elimino una mas y ahora si es vacia.
+79>80>La cola de prioridad está vacía.
+81>#  invierto nuevamente la prioridad y agrego los jugadores nuevamente.
+82>83>#  creo Jugador 5 y agrego a cola.
+84>85>86>87>88>Jugador 5: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+89>90>#  creo Jugador 6 y agrego a cola.
+91>92>93>94>95>Jugador 6: Juan, Uruguay, 22 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+96>97>#  ahora el prioritario es el Jugador 5.
+98>Jugador 5: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+99>#  creo Jugador 3 y agrego a cola.
+100>101>102>103>104>Jugador 3: Francisco, Holanda, 29 años
+Jugada: 1 
+Movimientos: Abajo Abajo Abajo Izquierda 
+105>106>#  creo Jugador 2 y agrego a cola.
+107>108>109>110>111>Jugador 2: Matias, Mexico, 18 años
+Jugada: 1 
+Movimientos: Derecha Arriba Arriba Izquierda 
+112>113>#  creo Jugador 10 y agrego a cola.
+114>115>116>117>118>Jugador 10: Vanessa, Uruguay, 32 años
+Jugada: 1 
+Movimientos: Abajo Izquierda Abajo Abajo 
+119>120>#  ahora el prioritario es el jugador 2.
+121>Jugador 2: Matias, Mexico, 18 años
+Jugada: 1 
+Movimientos: Derecha Arriba Arriba Izquierda 
+122>#  invierto la prioridad en una cola con elementos, debe modificar la cola y el prioritario es el Jugador 10.
+123>124>Jugador 10: Vanessa, Uruguay, 32 años
+Jugada: 1 
+Movimientos: Abajo Izquierda Abajo Abajo 
+125>#  elimino el Jugador prioritario y ahora el nuevo prioritario es 3.
+126>127>Jugador 3: Francisco, Holanda, 29 años
+Jugada: 1 
+Movimientos: Abajo Abajo Abajo Izquierda 
+128>#  la edad de prioridad de 3 es 29.
+129>La prioridad del jugador es 29.
+130>#  voy eliminando y verificando, el orden es 6, 5, y 2 .
+131>132>Jugador 6: Juan, Uruguay, 22 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+133>134>Jugador 5: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+135>136>Jugador 2: Matias, Mexico, 18 años
+Jugada: 1 
+Movimientos: Derecha Arriba Arriba Izquierda 
+137>#  queda un elemento en la cola.
+138>La cola de prioridad no está vacía.
+139>140>#  ahora la cola esta vacia.
+141>La cola de prioridad está vacía.
+142>143>Fin.

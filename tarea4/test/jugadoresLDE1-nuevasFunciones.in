@@ -1,0 +1,147 @@
+crearListaJugadores
+
+# creo 6 jugadores y los agrego a la lista
+
+# 1
+crearPartida
+
+crearJugada
+5 3 1 2 3
+agregarEnPartida
+
+crearJugada
+4 1 2 3 4
+agregarEnPartida
+
+crearJugador 10 23 Uruguay Pedro
+crearFecha 12/3/2023
+insertarJugadorListaJugadores
+
+
+
+# 2
+crearPartida
+
+crearJugada
+1 1 3 4 2
+agregarEnPartida
+
+crearJugada
+3 1 2 1 2
+agregarEnPartida
+
+crearJugador 5 12 Uruguay Juana 
+crearFecha 1/4/2019
+insertarJugadorListaJugadores
+
+
+
+# 3
+crearPartida
+
+crearJugada
+6 2 2 1 4
+agregarEnPartida
+
+crearJugador 8 20 Uruguay Jose
+crearFecha 25/1/2005
+insertarJugadorListaJugadores
+
+
+# 4
+crearPartida
+
+crearJugada
+7 4 2 3 1
+agregarEnPartida
+
+crearJugada
+9 1 3 2 1
+agregarEnPartida
+
+crearJugada
+5 4 1 3 2
+agregarEnPartida
+
+crearJugador 13 64 Uruguay Antonio
+crearFecha 17/8/2002
+insertarJugadorListaJugadores
+
+
+# 5
+crearPartida
+
+crearJugada
+1 3 1 2 4
+agregarEnPartida
+
+crearJugador 20 33 Argentina Mario
+crearFecha 11/2/1956
+insertarJugadorListaJugadores
+
+
+# 6
+crearPartida
+
+crearJugada
+24 1 3 2 1
+agregarEnPartida
+
+crearJugada
+31 1 4 2 2
+agregarEnPartida
+
+crearJugada
+21 3 1 3 2
+agregarEnPartida
+
+crearJugada
+4 3 2 1 1
+agregarEnPartida
+
+crearJugador 1 74 Chile Maria
+crearFecha 7/4/1983
+insertarJugadorListaJugadores
+
+# imprimo la cantidad y la lista
+
+imprimirCantidadListaJugadores
+imprimirMayorAMenorTJugadoresLDE
+
+# verifico que esten 4 jugadores distintos y los obtengo 
+
+estaJugadorConNombreEnTJugadoresLDE Maria
+obtenerJugadorConNombreTJugadoresLDE Maria
+
+estaJugadorConNombreEnTJugadoresLDE Juana
+obtenerJugadorConNombreTJugadoresLDE Juana
+
+estaJugadorConNombreEnTJugadoresLDE Pedro
+obtenerJugadorConNombreTJugadoresLDE Pedro
+
+estaJugadorConNombreEnTJugadoresLDE Jose
+obtenerJugadorConNombreTJugadoresLDE Jose
+
+# ahora elimino a esos jugadores y verifico que no estan mas
+
+eliminarJugadorConNombreTJugadoresLDE Maria
+estaJugadorConNombreEnTJugadoresLDE Maria
+
+eliminarJugadorConNombreTJugadoresLDE Juana
+estaJugadorConNombreEnTJugadoresLDE Juana
+
+eliminarJugadorConNombreTJugadoresLDE Pedro
+estaJugadorConNombreEnTJugadoresLDE Pedro
+
+eliminarJugadorConNombreTJugadoresLDE Jose
+estaJugadorConNombreEnTJugadoresLDE Jose
+
+# imprimo la cantidad y la lista
+
+imprimirCantidadListaJugadores
+imprimirMayorAMenorTJugadoresLDE
+
+# libero la lista
+liberarListaJugadores
+
+Fin

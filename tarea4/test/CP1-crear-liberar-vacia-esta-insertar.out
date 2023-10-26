@@ -1,0 +1,37 @@
+1>#  implementar crearCP, liberarCP, estaVaciaCP, estaEnCP, insertarEnCP.
+2>3>#  chequeo con cola vacía.
+4>La cola de prioridad está vacía.
+5>El jugador 5 no está en la cola de prioridad.
+6>#  creo Jugador 5 para ser mas prioritario.
+7>8>9>10>11>Jugador 5: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+12>#  inserto el jugador en la cola.
+13>14>#  ahora la cola no está vacía.
+15>La cola de prioridad no está vacía.
+16>#  chequeo varios jugadores en la cola.
+17>El jugador 5 está en la cola de prioridad.
+18>El jugador 6 no está en la cola de prioridad.
+19>El jugador 11 no está en la cola de prioridad.
+20>El jugador 0 no está en la cola de prioridad.
+21>#  creo Jugador 1 para ser segunda en prioridad.
+22>23>24>25>26>Jugador 1: Juan, Uruguay, 28 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+27>#  inserto en cola.
+28>29>#  creo Jugador 11 para ser igual en prioridad a anterior.
+30>31>32>33>34>35>36>37>38>Jugador 11: Roberto, Brasil, 28 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Arriba Abajo 
+Jugada: 3 
+Movimientos: Arriba Izquierda Izquierda Derecha 
+39>#  inserto en cola.
+40>41>#  testeo varios jugadores en cola.
+42>El jugador 5 está en la cola de prioridad.
+43>El jugador 6 no está en la cola de prioridad.
+44>El jugador 11 está en la cola de prioridad.
+45>El jugador 1 está en la cola de prioridad.
+46>El jugador 0 no está en la cola de prioridad.
+47>48>Fin.

@@ -1,0 +1,133 @@
+# creo una tabla de tamanio 5
+crearTTablaJugadores 5
+
+# creo un jugador Juan y la inserto en la tabla
+# Juan
+crearPartida
+
+crearJugada
+5 3 1 2 3
+agregarEnPartida
+
+crearJugada
+4 1 2 3 4
+agregarEnPartida
+
+crearJugador 10 23 Uruguay Juan
+crearFecha 12/3/2023
+insertarJugadorEnTabla
+
+
+# creo un jugador Maria y la inserto en la tabla
+# Maria
+crearPartida
+
+crearJugada
+24 1 3 2 1
+agregarEnPartida
+
+crearJugada
+31 1 4 2 2
+agregarEnPartida
+
+crearJugada
+21 3 1 3 2
+agregarEnPartida
+
+crearJugada
+4 3 2 1 1
+agregarEnPartida
+
+crearJugador 1 74 Chile Maria
+crearFecha 7/4/1983
+insertarJugadorEnTabla
+
+
+
+# imprimo la tabla (se imprime primero a María y luego a Juan)
+imprimirTTablaJugadores
+
+# libero la tabla
+liberarTTablaJugadores
+
+#
+#
+#
+#
+
+# creo una tabla de tamanio 5
+crearTTablaJugadores 5
+
+# creo un jugador Juan y la inserto en la tabla
+# Juan
+crearPartida
+
+crearJugada
+5 3 1 2 3
+agregarEnPartida
+
+crearJugada
+4 1 2 3 4
+agregarEnPartida
+
+crearJugador 10 23 Uruguay Juan
+crearFecha 12/3/2023
+insertarJugadorEnTabla
+
+
+# creo un jugador maria y la inserto en la tabla
+# maria
+crearPartida
+
+crearJugada
+24 1 3 2 1
+agregarEnPartida
+
+crearJugada
+31 1 4 2 2
+agregarEnPartida
+
+crearJugada
+21 3 1 3 2
+agregarEnPartida
+
+crearJugada
+4 3 2 1 1
+agregarEnPartida
+
+crearJugador 2 4 Chile maria
+crearFecha 7/4/1983
+insertarJugadorEnTabla
+
+# creo un jugador ariam y la inserto en la tabla
+# como ariam tiene las mismas letras que maria se produce una colision
+# ariam
+crearPartida
+
+crearJugada
+4 4 1 2 1
+agregarEnPartida
+
+crearJugada
+53 2 3 1 2
+agregarEnPartida
+
+crearJugada
+4 2 1 3 2
+agregarEnPartida
+
+crearJugada
+1 2 3 1 2
+agregarEnPartida
+
+crearJugador 6 4 Peru ariam
+crearFecha 7/4/1984
+insertarJugadorEnTabla
+
+# imprimo la tabla (se imprimen en orden: ariam, maria y juan, ya que ariam tiene fecha mayor que maria)
+imprimirTTablaJugadores
+
+# libero la tabla
+liberarTTablaJugadores
+
+Fin

@@ -1,0 +1,118 @@
+# creo una tabla de tamanio 5
+crearTTablaJugadores 5
+
+# creo un jugador mario y la inserto en la tabla
+# mario
+crearPartida
+
+crearJugada
+3 1 2 3 1
+agregarEnPartida
+
+crearJugada
+4 1 2 3 4
+agregarEnPartida
+
+crearJugador 3 42 Uruguay mario
+crearFecha 1/11/2022
+insertarJugadorEnTabla
+
+
+
+# creo un jugador maria y la inserto en la tabla
+# maria
+crearPartida
+
+crearJugada
+24 1 3 2 1
+agregarEnPartida
+
+crearJugada
+31 1 4 2 2
+agregarEnPartida
+
+crearJugada
+21 3 1 3 2
+agregarEnPartida
+
+crearJugada
+4 3 2 1 1
+agregarEnPartida
+
+crearJugador 1 31 Chile maria
+crearFecha 7/4/1983
+insertarJugadorEnTabla
+
+# creo un jugador ariam y la inserto en la tabla
+# como ariam tiene las mismas letras que maria se produce una colision
+# ariam
+crearPartida
+
+crearJugada
+4 4 1 2 1
+agregarEnPartida
+
+crearJugada
+53 2 3 1 2
+agregarEnPartida
+
+crearJugada
+4 2 1 3 2
+agregarEnPartida
+
+crearJugada
+1 2 3 1 2
+agregarEnPartida
+
+crearJugador 6 4 Peru ariam
+crearFecha 7/4/1984
+insertarJugadorEnTabla
+
+# imprimo la tabla
+imprimirTTablaJugadores
+
+# verifico que las 3 personas pertenezcan a la tabla y las obtengo
+# 
+# verifico que mario este en la tabla
+perteneceATTablaJugadores mario
+obtenerJugadorDeTTablaJugadores mario
+
+# verifico que ariam este en la tabla
+perteneceATTablaJugadores ariam
+obtenerJugadorDeTTablaJugadores ariam
+
+# verifico que maria este en la tabla
+perteneceATTablaJugadores maria
+obtenerJugadorDeTTablaJugadores maria 
+
+# verifico que juan no este en la tabla
+perteneceATTablaJugadores juan 
+
+#
+#
+# Ahora probamos el eliminar
+#
+#
+
+# elimino a maria de la tabla 
+eliminarJugadorDeTTablaJugadores maria
+
+# verifico que maria no esta en la tabla
+perteneceATTablaJugadores maria 
+
+# verifico que ariam sigue en la tabla
+perteneceATTablaJugadores ariam 
+obtenerJugadorDeTTablaJugadores ariam
+
+# elimino a ariam y a mario de la tabla
+eliminarJugadorDeTTablaJugadores ariam
+eliminarJugadorDeTTablaJugadores mario 
+
+# verifico que ninguno sigue en la tabla
+perteneceATTablaJugadores ariam 
+perteneceATTablaJugadores mario 
+
+# libero la tabla
+liberarTTablaJugadores
+
+Fin

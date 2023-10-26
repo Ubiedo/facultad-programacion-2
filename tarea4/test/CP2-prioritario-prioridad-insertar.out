@@ -1,0 +1,108 @@
+1>#  implementar prioritaria, prioridad, insertarEnCP.
+2>3>#  creo Jugador 5.
+4>5>6>7>8>Jugador 5: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+9>#  inserto jugador en cola.
+10>11>#  creo Jugador 25 .
+12>13>14>15>16>17>18>19>20>Jugador 25: Luis, Uruguay, 18 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+21>22>#  el jugador prioritario es el 25.
+23>Jugador 25: Luis, Uruguay, 18 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+24>#  creo Jugador 11.
+25>26>27>28>29>30>31>32>33>Jugador 11: Nicolas, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Abajo Derecha Abajo Derecha 
+Jugada: 2 
+Movimientos: Izquierda Arriba Izquierda Arriba 
+Jugada: 3 
+Movimientos: Izquierda Derecha Abajo Izquierda 
+34>#  inserto jugador en cola.
+35>36>#  el jugador prioritario sigue siendo 25.
+37>Jugador 25: Luis, Uruguay, 18 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+Jugada: 3 
+Movimientos: Izquierda Arriba Abajo Abajo 
+38>#  se imprime la edad de jugador 5.
+39>La prioridad del jugador es 21.
+40>#  Jugador 5 está en la cola.
+41>El jugador 5 está en la cola de prioridad.
+42>#  creo Jugador 6 e inserto en cola.
+43>44>45>46>47>Jugador 6: Juan, Uruguay, 16 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+48>49>#  ahora el jugador prioritario es el 6.
+50>Jugador 6: Juan, Uruguay, 16 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+51>#  la edad del jugador 6 es la de mayor prioridad.
+52>La prioridad del jugador es 16.
+53>#  creo Jugador 8 como mas prioritario y agrego a cola.
+54>55>56>57>58>59>60>61>62>Jugador 8: Martin, Argentina, 14 años
+Jugada: 1 
+Movimientos: Abajo Derecha Arriba Derecha 
+Jugada: 2 
+Movimientos: Izquierda Derecha Izquierda Arriba 
+Jugada: 3 
+Movimientos: Izquierda Arriba Derecha Derecha 
+63>64>#  creo Jugador 7 y agrego a cola.
+65>66>67>68>69>Jugador 7: Jessica, Uruguay, 19 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Abajo Abajo 
+70>71>#  creo Jugador 10 y agrego a cola.
+72>73>74>75>76>Jugador 10: Vanessa, Uruguay, 15 años
+Jugada: 1 
+Movimientos: Abajo Izquierda Abajo Abajo 
+77>78>#  creo Jugador 1 y agrego a cola.
+79>80>81>82>83>Jugador 1: Santiago, España, 20 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Abajo Izquierda 
+84>85>#  creo Jugador 2 y agrego a cola.
+86>87>88>89>90>Jugador 2: Matias, Mexico, 25 años
+Jugada: 1 
+Movimientos: Derecha Arriba Arriba Izquierda 
+91>92>#  creo Jugador 9 y agrego a cola.
+93>94>95>96>97>Jugador 9: Florencia, Turquia, 26 años
+Jugada: 1 
+Movimientos: Derecha Abajo Abajo Arriba 
+98>99>#  creo Jugador 3 y agrego a cola.
+100>101>102>103>104>Jugador 3: Francisco, Holanda, 29 años
+Jugada: 1 
+Movimientos: Abajo Abajo Abajo Izquierda 
+105>106>#  creo Jugador 4 y agrego a cola.
+107>108>109>110>111>Jugador 4: Federico, Ecuador, 21 años
+Jugada: 1 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+112>113>#  ahora el jugador prioritario es el 8.
+114>Jugador 8: Martin, Argentina, 14 años
+Jugada: 1 
+Movimientos: Abajo Derecha Arriba Derecha 
+Jugada: 2 
+Movimientos: Izquierda Derecha Izquierda Arriba 
+Jugada: 3 
+Movimientos: Izquierda Arriba Derecha Derecha 
+115>#  la edad del jugador 8 es la de mayor prioridad.
+116>La prioridad del jugador es 14.
+117>#  verifico que el jugador 1 está en la cola.
+118>El jugador 1 está en la cola de prioridad.
+119>#  la edad del jugador 1.
+120>La prioridad del jugador es 20.
+121>#  verifico que el jugador 10 está en la cola.
+122>El jugador 10 está en la cola de prioridad.
+123>#  la edad del jugador 10.
+124>La prioridad del jugador es 15.
+125>126>Fin.

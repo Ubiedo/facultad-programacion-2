@@ -1,0 +1,203 @@
+# implementar eliminarPriorotaria
+
+# creo la cola de tamaño 10
+crearColaPrioridad 10
+
+# elimino cuando la cola está vacía
+eliminarJugadorPrioritario
+
+# creo Jugador 8 y agrego a cola
+crearPartida
+crearJugada
+1 4 1 3 1
+agregarEnPartida
+crearJugada
+2 2 1 2 3 
+agregarEnPartida
+crearJugada
+3 2 3 1 1
+agregarEnPartida
+crearJugador 8 14 Argentina Martin
+imprimirJugador
+insertarColaPrioridad
+
+# verifico que el Jugador 8 está en la cola
+estaJugadorEnColaPrioridad 8
+
+# el Jugador 8 es el único y el prioritario
+imprimirJugadorPrioritario
+
+# elimino el jugador 8 de la cola
+eliminarJugadorPrioritario
+
+# ahora no debería estar y la cola es vacía
+estaJugadorEnColaPrioridad 8
+estaVaciaColaPrioridad
+
+# creo Jugador 7 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 4 4
+agregarEnPartida
+crearJugador 7 19 Uruguay Jessica
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 10 y agrego a cola
+crearPartida
+crearJugada
+1 4 2 4 4
+agregarEnPartida
+crearJugador 10 15 Uruguay Vanessa
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 1 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 4 2
+agregarEnPartida
+crearJugador 1 30 España Santiago
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 2 agrego a cola
+crearPartida
+crearJugada
+1 1 3 3 2
+agregarEnPartida
+crearJugador 2 25 Mexico Matias
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 8 y agrego a cola
+crearPartida
+crearJugada
+1 4 1 3 1
+agregarEnPartida
+crearJugada
+2 2 1 2 3 
+agregarEnPartida
+crearJugada
+3 2 3 1 1
+agregarEnPartida
+crearJugador 8 14 Argentina Martin
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 9 y agrego a cola
+crearPartida
+crearJugada
+1 1 5 4 3
+agregarEnPartida
+crearJugador 9 26 Turquia Florencia
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 5 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 5 21 Uruguay Juan
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 3 y agrego a cola
+crearPartida
+crearJugada
+1 4 4 4 2
+agregarEnPartida
+crearJugador 3 29 Holanda Francisco
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 4 y agrego a cola
+crearPartida
+crearJugada
+1 2 2 2 2
+agregarEnPartida
+crearJugador 4 21 Ecuador Federico
+imprimirJugador
+insertarColaPrioridad
+
+# el jugador prioritario sigue siendo 8
+imprimirJugadorPrioritario
+
+# ahora lo elimino y el prioritario es el 10
+eliminarJugadorPrioritario
+imprimirJugadorPrioritario
+
+# vuelvo a eliminar y el prioritario es el 7
+eliminarJugadorPrioritario
+imprimirJugadorPrioritario
+
+
+# creo Jugador 6 y agrego a cola
+crearPartida
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 6 13 Uruguay Juan
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 8 y agrego a cola
+crearPartida
+crearJugada
+1 4 1 3 1
+agregarEnPartida
+crearJugada
+2 2 1 2 3 
+agregarEnPartida
+crearJugada
+3 2 3 1 1
+agregarEnPartida
+crearJugador 8 14 Argentina Martin
+imprimirJugador
+insertarColaPrioridad
+
+# creo Jugador 10 y agrego a cola
+crearPartida
+crearJugada
+1 4 2 4 4
+agregarEnPartida
+crearJugador 10 15 Uruguay Vanessa
+imprimirJugador
+insertarColaPrioridad
+
+# ahora el 6 es el prioritario
+imprimirJugadorPrioritario
+
+# vuelvo a eliminar y el prioritaria es el 8
+eliminarJugadorPrioritario
+imprimirJugadorPrioritario
+
+# vuelvo a eliminar y el prioritaria es el 10
+eliminarJugadorPrioritario
+imprimirJugadorPrioritario
+
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+eliminarJugadorPrioritario
+
+# siguen quedando elementos en la cola
+estaVaciaColaPrioridad
+
+# el prioritario es el jugador 1
+imprimirJugadorPrioritario
+
+# y su prioridad es la edad
+imprimirPrioridadJugador 1
+
+# elimino y ahora si queda vacía
+eliminarJugadorPrioritario
+estaVaciaColaPrioridad
+
+liberarColaPrioridad
+
+Fin
