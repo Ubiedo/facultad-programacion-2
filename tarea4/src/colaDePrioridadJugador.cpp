@@ -40,7 +40,33 @@ TColaDePrioridadJugador crearCP(nat N) {
 void invertirPrioridad(TColaDePrioridadJugador &cp) {
   cp->prioridad *= -1;
   // resta invertir el heap
-  
+  // creo donde guardar de momento el nuevo conjunto
+  TJugador* nuevo = new TJugador[(cp->ultimo)]
+  // ahora voy agregando desde cp->ultimo hasta 0 en nuevo de menos prioritario a mas
+  nat restanAgregar = cp->ultimo;
+  if (restanAgregar > 1){
+    nuevo[restanAgregar] = cp->jugadores[1];
+    restanAgregar--;
+  }
+  if (restanAgregar > 1){
+    nuevo[restanAgregar] = cp->jugadores[2];
+    restanAgregar--;
+  }
+  // ahora el caso general
+  while (restanAgregar > 0){
+    // saber cual hay que agregar
+    // como escribir en codigo lo hehco en papel
+    restanAgregar--;
+  }
+  // agregar los de nuevo a la cola de prioridad
+  for (nat i = 0; i < cp->ultimo; i++)
+  {
+    cola->jugadores[i] = nuevo[i];
+    cola->ids[cola->jugadores[i]] = i;
+    nuevo[i] = NULL;
+  }
+  // eliminamos nuevo que ahora esta vacio
+  delete[] nuevo;
 }
 
 void liberarCP(TColaDePrioridadJugador &cp) {
@@ -55,6 +81,7 @@ void liberarCP(TColaDePrioridadJugador &cp) {
   cp = NULL;
 } // liberarCP
 
+// tengo que hacerlo nuevo con el criterio de el menos prioritario a la izquierda
 void insertarEnCP(TJugador jugador, TColaDePrioridadJugador &cp) {
   cp->ultimo++;
   // ubico el ultimo agregado donde corresponde
