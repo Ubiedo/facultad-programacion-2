@@ -17,7 +17,7 @@
 struct rep_colaDePrioridadJugador {
   TJugador* jugadores;
   nat* ids;
-  int prioridad;
+  bool prioridad;
   nat ultimo;
   nat maximo;
 };
@@ -33,31 +33,33 @@ TColaDePrioridadJugador crearCP(nat N) {
   }
   cola->maximo = N;
   cola->ultimo = 0;
-  cola->prioridad = 1;
+  cola->prioridad = true;
   return cola;
 } // crearCP
 
 void invertirPrioridad(TColaDePrioridadJugador &cp) {
-  cp->prioridad *= -1;
+  cp->prioridad = !cp->prioridad;
   // resta invertir el heap si no es vacio
   if (cp->ultimo > 0){
     // creamos una nueva cp auxiliar para guardar los datos en el nuevo orden, O(n)
-    TColaDePrioridadJugador nuevo = crearCP(cp->ultimo);
-    // agrego los elemento, O(n*log(n))
-    while (nuevo->ultimo != cp->ultimo){
-      insertarEnCP(cp->jugadores[cp->ultimo - nuevo->ultimo], nuevo);
+    TJugador* nuevo = new TJugador[(cp->ultimo)];
+    for (nat k = 0; k <= cp->ultimo; k++){
+      if (cp->jugadores[cp->ultimo - k] == NULL){
+        printf("\n\nERROR\n\n");
+      }
+      nuevo[k] = cp->jugadores[cp->ultimo - k];
+      cp->jugadores[k+1] = NULL;
     }
+    nat max = cp->ultimo;
+    cp->ultimo = 0;
     // agregar los de nuevo a la cola de prioridad O(n)
-    for (nat i = 1; i <= cp->ultimo; i++)
-    {
-      cp->jugadores[i] = nuevo->jugadores[i];
-      cp->ids[idTJugador(cp->jugadores[i])] = i;
-      nuevo->jugadores[i] = NULL;
+    for (nat i = 0; i < max; i++){
+      insertarEnCP(nuevo[i], cp);
+      nuevo[i] = NULL;
     }
     // eliminamos nuevo que ahora esta vacio
-    liberarCP(nuevo); // O(n)
+    delete[] nuevo;
   }
-  // por lo que nos queda O(n + n*log(n) + n + n) = O(n*log(n))
 }
 
 void liberarCP(TColaDePrioridadJugador &cp) {
@@ -72,18 +74,34 @@ void liberarCP(TColaDePrioridadJugador &cp) {
   cp = NULL;
 } // liberarCP
 
+nat mayorPrioridad(TColaDePrioridadJugador cp, nat posicion1, nat posicion2){
+  if (posicion2 > cp->ultimo){
+    return posicion1;
+  }
+  if (cp->prioridad){ // es prioritario el menor
+    if (edadTJugador(cp->jugadores[posicion1]) > edadTJugador(cp->jugadores[posicion2])){
+      return posicion2;
+    }
+    return posicion1;
+  } // sino es prioritario el mayor
+  if (edadTJugador(cp->jugadores[posicion1]) > edadTJugador(cp->jugadores[posicion2])){
+    return posicion1;
+  }
+  return posicion2;
+}
+
 void insertarEnCP(TJugador jugador, TColaDePrioridadJugador &cp) {
   cp->ultimo++;
-  // ubico el ultimo agregado donde corresponde
   nat posicion = cp->ultimo;
-  int resultado; // es necesario ya que la resta puede ser negativa
-  while (posicion > 1 && ((resultado = cp->prioridad*edadTJugador(cp->jugadores[posicion/2]) - cp->prioridad*edadTJugador(jugador)) > 0))
+  cp->jugadores[posicion] = jugador;
+  imprimirTJugador(jugador);
+  while (posicion > 1 && mayorPrioridad(cp, posicion, posicion/2) == posicion)
   {
     cp->jugadores[posicion] = cp->jugadores[posicion/2];
+    cp->jugadores[posicion/2] = jugador;
     cp->ids[idTJugador(cp->jugadores[posicion])] = posicion;
     posicion /= 2;
   }
-  cp->jugadores[posicion] = jugador;
   cp->ids[idTJugador(jugador)] = posicion;
 } // insertarEnCP
 
@@ -95,18 +113,6 @@ TJugador prioritario(TColaDePrioridadJugador cp) {
   return cp->jugadores[1];
 } // prioritario
 
-nat mayorPrioridad(TColaDePrioridadJugador cp, nat posicion){
-  int resultado;
-  if (posicion + 1 > cp->ultimo)
-  {
-    return posicion;
-  } else if ((resultado = cp->prioridad*edadTJugador(cp->jugadores[posicion]) - cp->prioridad*edadTJugador(cp->jugadores[posicion + 1])) > 0)
-  {
-    return posicion+1;
-  }
-  return posicion;
-}
-
 void eliminarPrioritario(TColaDePrioridadJugador &cp) {
   if (cp->ultimo > 0){
     cp->ids[idTJugador(cp->jugadores[1])] = 0;
@@ -114,12 +120,13 @@ void eliminarPrioritario(TColaDePrioridadJugador &cp) {
     cp->ultimo--;
     if (cp->ultimo > 0){
       TJugador reubicar = cp->jugadores[cp->ultimo+1];
+      cp->jugadores[1] = reubicar;
       // reubicar el jugador deseado suponiendo que arranca como prioritario, dejarlo donde corresponde 
       nat posicion = 1, mayor;
-      int resultado;
-      while (posicion*2 <= cp->ultimo && ((resultado = cp->prioridad*edadTJugador(reubicar) - cp->prioridad*edadTJugador(cp->jugadores[(mayor = mayorPrioridad(cp, posicion*2))])) > 0))
+      while (posicion*2 <= cp->ultimo && (mayor = mayorPrioridad(cp, posicion*2, posicion*2+1)) > 0 && mayorPrioridad(cp, mayor, posicion) == mayor)
       {
         cp->jugadores[posicion] = cp->jugadores[mayor];
+        cp->jugadores[mayor] = reubicar;
         cp->ids[idTJugador(cp->jugadores[posicion])] = posicion;
         posicion = mayor;
       }
