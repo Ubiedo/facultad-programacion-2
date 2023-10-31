@@ -96,14 +96,15 @@ TJugador prioritario(TColaDePrioridadJugador cp) {
 } // prioritario
 
 nat mayorPrioridad(TColaDePrioridadJugador cp, nat posicion){
+  int resultado;
   if (posicion + 1 > cp->ultimo)
   {
     return posicion;
-  } else if (edadTJugador(cp->jugadores[posicion]) > edadTJugador(cp->jugadores[posicion + 1]))
+  } else if ((resultado = cp->prioridad*edadTJugador(cp->jugadores[posicion]) - cp->prioridad*edadTJugador(cp->jugadores[posicion + 1])) > 0)
   {
-    return posicion;
+    return posicion+1;
   }
-  return posicion+1;
+  return posicion;
 }
 
 void eliminarPrioritario(TColaDePrioridadJugador &cp) {
