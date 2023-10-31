@@ -1,8 +1,7 @@
-1,4c1,2
+1,4c1
 < 1>El jugador prioritario es: 
 < Jugador 1: Juan, Uruguay, 21 años
 < Bien.
 < 2>Fin.
 ---
-> double free or corruption (!prev)
 > timeout: la orden monitorizada ha volcado un 'core'

@@ -1,130 +1,28 @@
-0a1,63
-> ==92091== Invalid write of size 8
-> ==92091==    at 0x4093E2: insertarEnCP(rep_jugador*, rep_colaDePrioridadJugador*&) (colaDePrioridadJugador.cpp:67)
-> ==92091==    by 0x40550D: main_insertarColaPrioridad(rep_jugador*&, rep_colaDePrioridadJugador*&) (principal.cpp:1595)
-> ==92091==    by 0x4025B5: main (principal.cpp:604)
-> ==92091==  Address 0x4da8db8 is 0 bytes after a block of size 88 alloc'd
-> ==92091==    at 0x484522F: operator new[](unsigned long) (vg_replace_malloc.c:652)
-> ==92091==    by 0x409146: crearCP(unsigned int) (colaDePrioridadJugador.cpp:27)
-> ==92091==    by 0x40542C: main_crearColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1580)
-> ==92091==    by 0x402533: main (principal.cpp:598)
-> ==92091== 
-> ==92091== Invalid write of size 8
-> ==92091==    at 0x409338: insertarEnCP(rep_jugador*, rep_colaDePrioridadJugador*&) (colaDePrioridadJugador.cpp:63)
-> ==92091==    by 0x40550D: main_insertarColaPrioridad(rep_jugador*&, rep_colaDePrioridadJugador*&) (principal.cpp:1595)
-> ==92091==    by 0x4025B5: main (principal.cpp:604)
-> ==92091==  Address 0x4da8dc8 is 16 bytes after a block of size 88 alloc'd
-> ==92091==    at 0x484522F: operator new[](unsigned long) (vg_replace_malloc.c:652)
-> ==92091==    by 0x409146: crearCP(unsigned int) (colaDePrioridadJugador.cpp:27)
-> ==92091==    by 0x40542C: main_crearColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1580)
-> ==92091==    by 0x402533: main (principal.cpp:598)
-> ==92091== 
-> ==92091== Invalid read of size 8
-> ==92091==    at 0x40935D: insertarEnCP(rep_jugador*, rep_colaDePrioridadJugador*&) (colaDePrioridadJugador.cpp:64)
-> ==92091==    by 0x40550D: main_insertarColaPrioridad(rep_jugador*&, rep_colaDePrioridadJugador*&) (principal.cpp:1595)
-> ==92091==    by 0x4025B5: main (principal.cpp:604)
-> ==92091==  Address 0x4da8dc8 is 16 bytes after a block of size 88 alloc'd
-> ==92091==    at 0x484522F: operator new[](unsigned long) (vg_replace_malloc.c:652)
-> ==92091==    by 0x409146: crearCP(unsigned int) (colaDePrioridadJugador.cpp:27)
-> ==92091==    by 0x40542C: main_crearColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1580)
-> ==92091==    by 0x402533: main (principal.cpp:598)
-> ==92091== 
-> ==92091== Invalid read of size 8
-> ==92091==    at 0x406300: liberarTJugador(rep_jugador*&) (jugador.cpp:22)
-> ==92091==    by 0x40924C: liberarCP(rep_colaDePrioridadJugador*&) (colaDePrioridadJugador.cpp:48)
-> ==92091==    by 0x4054B3: main_liberarColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1590)
-> ==92091==    by 0x402585: main (principal.cpp:602)
-> ==92091==  Address 0x4da8dc8 is 16 bytes after a block of size 88 alloc'd
-> ==92091==    at 0x484522F: operator new[](unsigned long) (vg_replace_malloc.c:652)
-> ==92091==    by 0x409146: crearCP(unsigned int) (colaDePrioridadJugador.cpp:27)
-> ==92091==    by 0x40542C: main_crearColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1580)
-> ==92091==    by 0x402533: main (principal.cpp:598)
-> ==92091== 
-> ==92091== Invalid read of size 8
-> ==92091==    at 0x406315: liberarTJugador(rep_jugador*&) (jugador.cpp:23)
-> ==92091==    by 0x40924C: liberarCP(rep_colaDePrioridadJugador*&) (colaDePrioridadJugador.cpp:48)
-> ==92091==    by 0x4054B3: main_liberarColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1590)
-> ==92091==    by 0x402585: main (principal.cpp:602)
-> ==92091==  Address 0x4da8dc8 is 16 bytes after a block of size 88 alloc'd
-> ==92091==    at 0x484522F: operator new[](unsigned long) (vg_replace_malloc.c:652)
-> ==92091==    by 0x409146: crearCP(unsigned int) (colaDePrioridadJugador.cpp:27)
-> ==92091==    by 0x40542C: main_crearColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1580)
-> ==92091==    by 0x402533: main (principal.cpp:598)
-> ==92091== 
-> ==92091== Invalid write of size 8
-> ==92091==    at 0x40632E: liberarTJugador(rep_jugador*&) (jugador.cpp:24)
-> ==92091==    by 0x40924C: liberarCP(rep_colaDePrioridadJugador*&) (colaDePrioridadJugador.cpp:48)
-> ==92091==    by 0x4054B3: main_liberarColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1590)
-> ==92091==    by 0x402585: main (principal.cpp:602)
-> ==92091==  Address 0x4da8dc8 is 16 bytes after a block of size 88 alloc'd
-> ==92091==    at 0x484522F: operator new[](unsigned long) (vg_replace_malloc.c:652)
-> ==92091==    by 0x409146: crearCP(unsigned int) (colaDePrioridadJugador.cpp:27)
-> ==92091==    by 0x40542C: main_crearColaPrioridad(rep_colaDePrioridadJugador*&) (principal.cpp:1580)
-> ==92091==    by 0x402533: main (principal.cpp:598)
-> ==92091== 
-24,25c87,88
-< 24>El jugador 8 no está en la cola de prioridad.
-< 25>La cola de prioridad está vacía.
----
-> 24>El jugador 8 está en la cola de prioridad.
-> 25>La cola de prioridad no está vacía.
-67c130
-< 94>Jugador 8: Martin, Argentina, 14 años
----
-> 94>Jugador 1: Santiago, España, 30 años
-69,73c132
-< Movimientos: Abajo Derecha Arriba Derecha 
-< Jugada: 2 
-< Movimientos: Izquierda Derecha Izquierda Arriba 
-< Jugada: 3 
-< Movimientos: Izquierda Arriba Derecha Derecha 
----
-> Movimientos: Derecha Izquierda Abajo Izquierda 
-75c134
+75c75
 < 96>97>Jugador 10: Vanessa, Uruguay, 15 años
 ---
-> 96>97>Jugador 1: Santiago, España, 30 años
-77c136
+> 96>97>Jugador 5: Juan, Uruguay, 21 años
+77c77
 < Movimientos: Abajo Izquierda Abajo Abajo 
 ---
-> Movimientos: Derecha Izquierda Abajo Izquierda 
-79c138
+> Movimientos: Derecha Izquierda Arriba Abajo 
+79c79
 < 99>100>Jugador 7: Jessica, Uruguay, 19 años
 ---
-> 99>100>Jugador 1: Santiago, España, 30 años
-81c140
+> 99>100>Jugador 2: Matias, Mexico, 25 años
+81c81
 < Movimientos: Derecha Izquierda Abajo Abajo 
 ---
-> Movimientos: Derecha Izquierda Abajo Izquierda 
-99c158
-< 127>Jugador 6: Juan, Uruguay, 13 años
----
-> 127>Jugador 1: Santiago, España, 30 años
-101c160
-< Movimientos: Derecha Izquierda Arriba Abajo 
----
-> Movimientos: Derecha Izquierda Abajo Izquierda 
-103c162
+> Movimientos: Derecha Arriba Arriba Izquierda 
+103c103
 < 129>130>Jugador 8: Martin, Argentina, 14 años
 ---
-> 129>130>Jugador 1: Santiago, España, 30 años
-105,109c164
+> 129>130>Jugador 7: Jessica, Uruguay, 19 años
+105,109c105
 < Movimientos: Abajo Derecha Arriba Derecha 
 < Jugada: 2 
 < Movimientos: Izquierda Derecha Izquierda Arriba 
 < Jugada: 3 
 < Movimientos: Izquierda Arriba Derecha Derecha 
 ---
-> Movimientos: Derecha Izquierda Abajo Izquierda 
-111c166
-< 132>133>Jugador 10: Vanessa, Uruguay, 15 años
----
-> 132>133>Jugador 1: Santiago, España, 30 años
-113c168
-< Movimientos: Abajo Izquierda Abajo Abajo 
----
-> Movimientos: Derecha Izquierda Abajo Izquierda 
-123c178
-< 148>149>La cola de prioridad está vacía.
----
-> 148>149>La cola de prioridad no está vacía.
+> Movimientos: Derecha Izquierda Abajo Abajo 
