@@ -30,7 +30,7 @@ all: principal
 # Objetivos que no son archivos.
 .PHONY: all clean_bin clean_test clean testing entrega claves
 
-ARCHIVO_ENTREGA=EntregaTarea3.tar.gz
+ARCHIVO_ENTREGA=EntregaTarea4.tar.gz
 
 ENTREGAR = fecha jugada jugador partida jugadoresLDE jugadoresABB pilaJugador colaJugadoresABB conjuntoIds tablaJugadores aplicaciones colaDePrioridadJugador
 
@@ -85,7 +85,8 @@ $(EJECUTABLE):$(ODIR)/$(PRINCIPAL).o $(OS)
 	$(LD) $(CCFLAGS) $^ -o $@
 
 # casos de prueba
-IDS_PUBLICOS = jugadoresLDE1-nuevasFunciones \
+IDS_PUBLICOS = tarea3-combinado \
+		jugadoresLDE1-nuevasFunciones \
 		tabla1-crearLiberar \
 		tabla2-insertarImprimir \
 		tabla3-eliminarPerteneceObtener \
@@ -97,7 +98,10 @@ IDS_PUBLICOS = jugadoresLDE1-nuevasFunciones \
 		CP5-tiempo \
 		aplicaciones1-listarEnOrden
 
+		
+
 IDS_PRIVADOS = 
+
 
 CASOS = $(IDS_PUBLICOS) $(IDS_PRIVADOS)
 

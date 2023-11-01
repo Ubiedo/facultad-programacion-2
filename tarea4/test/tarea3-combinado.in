@@ -1,0 +1,1109 @@
+crearCola
+
+# imprimo la cantidad de elementos de la cola, que debe ser 0
+imprimirCantidadCola
+
+# Creo arbol con Jugadores 4 y 5
+crearArbolJugadores
+
+crearJugador 5 11 Argentina Maria
+insertarJugadorArbolJugadores
+
+crearJugador 4 21 Uruguay Juan
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con Jugadores 4 y 5
+encolar
+
+# imprimo la cantidad de elementos de la cola, que debe ser 1
+imprimirCantidadCola
+
+# obtengo el frente de la cola, que es el árbol con los Jugadores 4 y 5
+obtenerFrenteCola
+
+# libero la memoria asociada a la cola
+liberarCola
+
+# imrpimo el arbol con los Jugadores 4 y 5
+imprimirArbolJugadores
+
+# libero el árbol
+liberarArbolJugadores
+
+crearCola
+
+# imprimo la cantidad de elementos en la cola, que debe ser 0
+imprimirCantidadCola
+
+# creo un árbol de jugadores, inicialmente vacío
+crearArbolJugadores
+
+# Encolo el arbol vacio recién creado
+encolar
+
+# creo un árbol de jugadores, inicialmente vacío
+crearArbolJugadores
+
+# creo e inserto 2 jugadores en el árbol
+crearJugador 5 11 Argentina Maria
+insertarJugadorArbolJugadores
+
+crearJugador 4 55 Uruguay Raul
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con dos jugadores
+encolar
+
+# creo un árbol de jugadores, inicialmente vacío
+crearArbolJugadores
+
+# creo e inserto 2 jugadores en el árbol
+crearJugador 5 11 Argentina Maria
+insertarJugadorArbolJugadores
+
+crearJugador 4 55 Uruguay Raul
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con dos jugadores
+encolar
+
+# creo un árbol de jugadores, inicialmente vacío
+crearArbolJugadores
+
+# creo e inserto 2 jugadores en el árbol
+crearJugador 5 11 Argentina Maria
+insertarJugadorArbolJugadores
+
+crearJugador 4 55 Uruguay Raul
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con dos jugadores
+encolar
+
+# creo un árbol de jugadores, inicialmente vacío
+crearArbolJugadores
+
+# creo e inserto 2 jugadores en el árbol
+crearJugador 5 11 Argentina Maria
+insertarJugadorArbolJugadores
+
+crearJugador 4 55 Uruguay Raul
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con dos jugadores
+encolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 5 elementos
+imprimirCantidadCola
+
+# Obtengo el frente de la cola, es el árbol vacío
+obtenerFrenteCola
+
+# Elimino de la Cola el árbol vacio
+desencolar
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# imprimo la cantidad de elementos en la cola, debe haber 4 elementos
+imprimirCantidadCola
+
+# Obtengo el frente de la cola, es un árbol con 2 jugadores (Jugadores 4 y 5)
+obtenerFrenteCola
+
+# Elimino de la Cola el Arbol con Jugadores 4 y 5
+desencolar
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# imprimo la cantidad de elementos en la cola, debe haber 3 elementos
+imprimirCantidadCola
+
+# Obtengo el frente de la cola
+obtenerFrenteCola
+
+# Elimino de la Cola el Arbol
+desencolar
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# imprimo la cantidad de elementos en la cola, debe haber 2 elementos
+imprimirCantidadCola
+
+# Obtengo el frente de la cola
+obtenerFrenteCola
+
+# Elimino de la Cola el Arbol
+desencolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 1 elemento
+imprimirCantidadCola
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# Obtengo el frente de la cola
+obtenerFrenteCola
+
+# Elimino de la Cola el Arbol
+desencolar
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# imprimo la cantidad de elementos en la cola, debe haber 0 elementos
+imprimirCantidadCola
+
+# libero la memoria asociada a la cola
+liberarCola
+
+crearCola
+
+# Creo arbol con un jugador
+crearArbolJugadores
+
+crearJugador 2 56 Chile Pablo
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con Jugador 2
+encolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 1 elemento
+imprimirCantidadCola
+
+# Obtengo el frente de la Cola
+obtenerFrenteCola
+
+# Elimino de la Cola el Arbol con Jugador 2
+desencolar
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# libero la memoria asociada a la cola
+liberarCola
+
+crearCola
+
+# imprimo la cantidad de elementos en la cola, que debe ser 0
+imprimirCantidadCola
+
+# creo un árbol de jugadores, inicialmente vacío
+crearArbolJugadores
+
+# Encolo el arbol vacio recién creado
+encolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 1 elemento
+imprimirCantidadCola
+
+# obtengo nuevamente el Arbol y lo desencolo
+obtenerFrenteCola
+desencolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 0 elemento
+imprimirCantidadCola
+
+# creo e inserto 2 jugadores en el árbol
+crearJugador 5 11 Uruguay Maria
+insertarJugadorArbolJugadores
+
+crearJugador 4 55 Uruguay Raul
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con dos jugadores
+encolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 1 elemento
+imprimirCantidadCola
+
+# creo un árbol de jugadores, inicialmente vacío
+crearArbolJugadores
+
+# creo e inserto 1 jugador en el árbol
+crearJugador 2 55 Uruguay Raul
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con dos jugadores
+encolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 2 elementos
+imprimirCantidadCola
+
+# creo un árbol de jugadores, inicialmente vacío
+crearArbolJugadores
+
+# creo e inserto 1 jugador en el árbol
+crearJugador 3 11 Uruguay Maria
+insertarJugadorArbolJugadores
+
+# Encolo el arbol con dos jugadores
+encolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 3 elementos
+imprimirCantidadCola
+
+# Obtengo el frente de la cola, es el árbol con Maria y Raul
+obtenerFrenteCola
+
+# Elimino de la Cola el árbol con Maria y Raul
+desencolar
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# imprimo la cantidad de elementos en la cola, debe haber 2 elementos
+imprimirCantidadCola
+
+# Obtengo el frente de la cola, es un árbol con Raul
+obtenerFrenteCola
+
+# Elimino de la Cola el Arbol con Jugador Raul
+desencolar
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# imprimo la cantidad de elementos en la cola, debe haber 1 elemento
+imprimirCantidadCola
+
+# Obtengo el frente de la cola, es un árbol con Maria
+obtenerFrenteCola
+
+# Elimino de la Cola el Arbol
+desencolar
+
+# libero la memoria asociada al árbol que obtuve
+liberarArbolJugadores
+
+# imprimo la cantidad de elementos en la cola, debe haber 0 elemntos
+imprimirCantidadCola
+
+# libero la memoria asociada a la cola
+liberarCola
+
+# -------------------------------------------
+
+crearCola
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+crearArbolJugadores
+encolar
+
+# imprimo la cantidad de elementos en la cola, debe haber 22 elemntos
+imprimirCantidadCola
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+obtenerFrenteCola
+desencolar
+liberarArbolJugadores
+
+liberarCola
+
+# crea un conjunto con rango 1..10
+crearConjunto 10
+
+# imprime el conjunto vacio, esto es, una linea vacia
+imprimirConjunto
+
+insertarConjunto 3
+# imprime un conjunto con 3 como unico elemento
+imprimirConjunto
+
+insertarConjunto 5
+insertarConjunto 7
+# imprime conjunto con 3 elementos
+imprimirConjunto
+
+insertarConjunto 1
+insertarConjunto 10
+# imprimir conjunto con casos borde
+imprimirConjunto
+
+# intenta insertar elementos fuera de rango
+insertarConjunto 0
+insertarConjunto 15
+# imprime el conjunto sin modificaciones
+imprimirConjunto
+
+# libera el conjunto
+liberarConjunto
+
+# crea un conjunto con rango 1..10
+crearConjunto 10
+
+# verifica si el conjunto es vacío (lo es)
+esVacioConjunto
+
+# inserta 7 elementos
+insertarConjunto 1
+insertarConjunto 2
+insertarConjunto 3
+insertarConjunto 5
+insertarConjunto 6
+insertarConjunto 7
+insertarConjunto 9
+# imprime el conjunto
+imprimirConjunto
+
+# verifica si el conjunto es vacío (no lo es)
+esVacioConjunto
+
+borrarConjunto 1
+# imprime el conjunto borrando el 1
+imprimirConjunto
+
+borrarConjunto 3
+borrarConjunto 5
+borrarConjunto 7
+borrarConjunto 9
+# borra los impares e imprime solo elementos pares
+imprimirConjunto 
+
+# borra el resto de elementos e imprime el conjunto vacio 
+borrarConjunto 2
+borrarConjunto 6
+imprimirConjunto 
+
+# libera el conjunto 
+liberarConjunto  
+
+# crea un conjunto con rango 1..10
+crearConjunto 10
+
+# verifica cantidad máxima del conjunto (10)
+cantMaxConjunto
+
+# inserta 7 elementos
+insertarConjunto 1
+insertarConjunto 2
+insertarConjunto 3
+insertarConjunto 5
+insertarConjunto 6
+insertarConjunto 7
+insertarConjunto 9
+# imprime el conjunto
+imprimirConjunto 
+
+# verifica dos elementos que si pertenecen
+perteneceConjunto 3
+perteneceConjunto 7
+
+# verifica dos elementos que no pertenecen y estan en el rango
+perteneceConjunto 4
+perteneceConjunto 8
+
+# verifica dos elementos que no pertenecen y no estan en el rango
+perteneceConjunto 0
+perteneceConjunto 11
+
+# imprime el cardinal del conjunto 
+cardinalConjunto
+
+# borra dos elementos e imprime el cardinal
+borrarConjunto 1
+borrarConjunto 5
+cardinalConjunto
+
+# verifica que los elementos borrados no esten mas 
+perteneceConjunto 1
+perteneceConjunto 5
+
+# libera el conjunto 
+liberarConjunto 
+
+# crea un conjunto con rango 1..10
+crearConjunto 10
+# inserta 5 elementos pares
+insertarConjunto 2
+insertarConjunto 4
+insertarConjunto 6
+insertarConjunto 8
+insertarConjunto 10
+imprimirConjunto
+# crea un conjunto auxiliar con rango 1..10
+crearConjuntoAux 10
+# inserta 5 elementos impares
+insertarConjuntoAux 1
+insertarConjuntoAux 3
+insertarConjuntoAux 5
+insertarConjuntoAux 7
+insertarConjuntoAux 9
+imprimirConjuntoAux 
+# crea la union entre los conjuntos, la imprime y la libera 
+unionConjunto
+# libera los dos conjuntos
+liberarConjunto
+liberarConjuntoAux
+#
+#
+#
+# crea un conjunto con rango 1..12
+crearConjunto 12
+
+# inserta 7 elementos
+insertarConjunto 1
+insertarConjunto 2
+insertarConjunto 3
+insertarConjunto 4
+insertarConjunto 5
+insertarConjunto 6
+insertarConjunto 7
+imprimirConjunto 
+
+# crea un conjunto auxiliar con rango 1..12
+crearConjuntoAux 12
+
+# inserta 7 elementos
+insertarConjuntoAux 12
+insertarConjuntoAux 11
+insertarConjuntoAux 10
+insertarConjuntoAux 9
+insertarConjuntoAux 8
+insertarConjuntoAux 7
+insertarConjuntoAux 6
+imprimirConjuntoAux 
+
+# crea la union entre los conjuntos, la imprime y la libera (en este caso hay elementos en comun)
+unionConjunto 
+
+# libera los dos conjuntos 
+liberarConjunto
+liberarConjuntoAux
+
+# crea un conjunto con rango 1..10
+crearConjunto 10
+
+# inserta 5 elementos pares
+insertarConjunto 2
+insertarConjunto 4
+insertarConjunto 6
+insertarConjunto 8
+insertarConjunto 10
+imprimirConjunto
+
+# crea un conjunto auxiliar con rango 1..10
+crearConjuntoAux 10
+
+# inserta 5 elementos impares
+insertarConjuntoAux 1
+insertarConjuntoAux 3
+insertarConjuntoAux 5
+insertarConjuntoAux 7
+insertarConjuntoAux 9
+imprimirConjuntoAux 
+
+# crea la interseccion entre los conjuntos (es vacia), la imprime y la libera 
+interseccionConjunto
+
+# libera los dos conjuntos
+liberarConjunto
+liberarConjuntoAux
+
+#
+#
+#
+# crea un conjunto con rango 1..12
+crearConjunto 12
+
+# inserta 7 elementos
+insertarConjunto 1
+insertarConjunto 2
+insertarConjunto 3
+insertarConjunto 4
+insertarConjunto 5
+insertarConjunto 6
+insertarConjunto 7
+imprimirConjunto 
+
+# crea un conjunto auxiliar con rango 1..12
+crearConjuntoAux 12
+
+# inserta 7 elementos
+insertarConjuntoAux 12
+insertarConjuntoAux 11
+insertarConjuntoAux 10
+insertarConjuntoAux 9
+insertarConjuntoAux 8
+insertarConjuntoAux 7
+insertarConjuntoAux 6
+imprimirConjuntoAux 
+
+# crea la interseccion entre los conjuntos, la imprime y la libera (en este caso hay 2 elementos en comun)
+interseccionConjunto 
+
+# libera los dos conjuntos 
+liberarConjunto
+liberarConjuntoAux
+
+crearArbolJugadores
+
+# Construyo arbol 
+
+# -- Primer jugador Juan 1 --
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 1 21 Uruguay Juan
+insertarJugadorArbolJugadores
+
+esVacioArbolJugadores
+
+# -- Segundo jugador Roberto 5 --
+crearJugada
+1 4 3 2 1
+agregarEnPartida
+crearJugador 5 19 Brasil Roberto
+insertarJugadorArbolJugadores
+
+# -- Tercer jugador Luis 7 --
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 7 21 Uruguay Luis
+insertarJugadorArbolJugadores
+
+
+# -- Cuarto jugador Andres 8 --
+crearJugada
+1 3 3 3 3
+agregarEnPartida
+crearJugador 8 19 Uruguay Andres
+insertarJugadorArbolJugadores
+
+# -- Quinto jugador Emilia 2 --
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 2 21 Uruguay Emmilia
+insertarJugadorArbolJugadores
+
+
+# -- Sexto jugador Ines 10 --
+crearJugada
+2 2 2 2 2
+agregarEnPartida
+crearJugador 10 21 Uruguay Ines
+insertarJugadorArbolJugadores
+
+
+# -- Septimo jugador Isabel 3 --
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 3 26 Uruguay Isabel
+insertarJugadorArbolJugadores
+
+# La maxima amplitud es 2
+amplitudArbolJugadores
+
+liberarArbolJugadores
+
+crearArbolJugadores
+
+# Construyo arbol 
+
+# -- Primer jugador Juan 7 --
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 7 21 Uruguay Juan
+insertarJugadorArbolJugadores
+
+# -- Segundo jugador Roberto 20 --
+crearJugada
+1 4 3 2 1
+agregarEnPartida
+crearJugador 20 19 Brasil Roberto
+insertarJugadorArbolJugadores
+
+# -- Tercer jugador Luis 2 --
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 2 21 Uruguay Luis
+insertarJugadorArbolJugadores
+
+
+# imprimo arbol
+imprimirArbolJugadores
+
+# Transformo arbol en lista
+serializarArbolJugadores
+
+liberarArbolJugadores
+
+
+crearArbolJugadores
+
+# Construyo arbol 
+
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 20 20 Uruguay Juan
+insertarJugadorArbolJugadores
+
+crearJugada
+1 4 3 2 1
+agregarEnPartida
+crearJugador 12 12 Brasil Roberto
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 30 30 Uruguay Luis
+insertarJugadorArbolJugadores
+
+crearJugada
+1 3 3 3 3
+agregarEnPartida
+crearJugador 6 6 Uruguay Andres
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 3 3 Uruguay Emilia
+insertarJugadorArbolJugadores
+
+crearJugada
+2 2 2 2 2
+agregarEnPartida
+crearJugador 4 4 Uruguay Ines
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 7 7 Uruguay Isabel
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 15 15 Uruguay Raul
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 25 25 Uruguay Noelia
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 22 22 Uruguay Matias
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 35 35 Uruguay Nicolas
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 33 33 Uruguay Emily
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 36 36 Uruguay Diego
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 23 23 Uruguay Martin
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 8 8 Uruguay Enrique
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 39 39 Uruguay Lucia
+insertarJugadorArbolJugadores
+
+# La maxima amplitud es 5
+amplitudArbolJugadores
+
+liberarArbolJugadores
+
+crearArbolJugadores
+
+# Construyo arbol 
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 20 20 Uruguay Juan
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 12 12 Uruguay Rosa
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 30 30 Uruguay Perez
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 6 6 Uruguay Jose
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 3 3 Uruguay Sofia
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 7 7 Uruguay Emiliano
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 15 15 Uruguay Raul
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 25 25 Uruguay Noelia
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 22 22 Uruguay Matias
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 23 23 Uruguay Noelia
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 35 35 Uruguay Nicolas
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 33 33 Uruguay Emily
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 36 36 Uruguay Diego
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 26 26 Uruguay Martin
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 16 16 Uruguay Enrique
+insertarJugadorArbolJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 13 13 Uruguay Lucia
+insertarJugadorArbolJugadores
+
+# Transformo arbol en lista
+serializarArbolJugadores
+
+liberarArbolJugadores
+
+
+
+crearListaJugadores
+
+# Crear lista de jugadores: Luis, Roberto, Juan, Pedro
+
+crearJugada
+1 1 2 3 4
+agregarEnPartida
+crearJugador 1 21 Uruguay Juan
+crearFecha 1/12/2022
+insertarJugadorListaJugadores
+
+crearJugada
+1 4 3 2 1
+agregarEnPartida
+crearJugador 5 19 Brasil Roberto
+crearFecha 5/12/2022
+insertarJugadorListaJugadores
+
+crearJugada
+1 1 1 1 1
+agregarEnPartida
+crearJugador 7 21 Uruguay Luis
+crearFecha 1/1/2023
+insertarJugadorListaJugadores
+
+crearJugada
+1 2 2 2 2
+agregarEnPartida
+crearJugador 2 7 Uruguay Pedro
+crearFecha 30/11/2022
+insertarJugadorListaJugadores
+
+# imprimir contenido lista LDE
+imprimirMayorAMenorTJugadoresLDE
+
+# imprimir inicio lista: Luis
+imprimirInicioListaJugadores
+
+eliminarInicioListaJugadores
+
+# imprimir inicio lista: Roberto
+imprimirInicioListaJugadores
+
+eliminarFinalListaJugadores
+
+# imprimir inicio lista: Roberto
+imprimirInicioListaJugadores
+
+liberarListaJugadores
+
+
+crearPilaJugadores
+
+imprimirCantidadPila
+
+liberarPilaJugadores
+
+crearPilaJugadores
+
+imprimirCantidadPila
+
+crearJugada
+1 1 2 3 4
+crearPartida
+agregarEnPartida
+crearJugador 1 21 Uruguay Juan
+
+apilarPilaJugadores
+liberarJugador
+
+imprimirCantidadPila
+
+crearJugada
+2 2 2 2 2
+crearPartida
+agregarEnPartida
+crearJugador 7 20 Uruguay Nicolás
+
+apilarPilaJugadores
+liberarJugador
+
+imprimirCantidadPila
+
+crearJugada
+3 4 3 2 1
+crearPartida
+agregarEnPartida
+crearJugador 4 23 Uruguay Jessica
+
+apilarPilaJugadores
+liberarJugador
+
+imprimirCantidadPila
+
+obtenerCimaPila
+
+desapilar
+
+imprimirCantidadPila
+
+obtenerCimaPila
+
+desapilar
+
+imprimirCantidadPila
+
+obtenerCimaPila
+
+desapilar
+
+liberarPilaJugadores
+
+
+
+Fin

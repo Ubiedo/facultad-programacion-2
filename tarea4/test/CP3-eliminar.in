@@ -88,7 +88,7 @@ insertarColaPrioridad
 # creo Jugador 9 y agrego a cola
 crearPartida
 crearJugada
-1 1 5 4 3
+1 1 4 4 3
 agregarEnPartida
 crearJugador 9 26 Turquia Florencia
 imprimirJugador

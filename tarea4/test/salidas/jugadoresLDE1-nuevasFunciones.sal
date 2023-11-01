@@ -1,0 +1,95 @@
+1>2>#  creo 6 jugadores y los agrego a la lista.
+3>#  1.
+4>5>6>7>8>9>10>11>12>#  2.
+13>14>15>16>17>18>19>20>21>#  3.
+22>23>24>25>26>27>28>#  4.
+29>30>31>32>33>34>35>36>37>38>39>#  5.
+40>41>42>43>44>45>46>#  6.
+47>48>49>50>51>52>53>54>55>56>57>58>59>#  imprimo la cantidad y la lista.
+60>La cantidad de jugadores en la lista es: 6.
+61>Jugador 10: Pedro, Uruguay, 23 años
+Jugada: 4 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugada: 5 
+Movimientos: Arriba Derecha Izquierda Arriba 
+12/3/2023
+Jugador 5: Juana, Uruguay, 12 años
+Jugada: 1 
+Movimientos: Derecha Arriba Abajo Izquierda 
+Jugada: 3 
+Movimientos: Derecha Izquierda Derecha Izquierda 
+1/4/2019
+Jugador 8: Jose, Uruguay, 20 años
+Jugada: 6 
+Movimientos: Izquierda Izquierda Derecha Abajo 
+25/1/2005
+Jugador 13: Antonio, Uruguay, 64 años
+Jugada: 5 
+Movimientos: Abajo Derecha Arriba Izquierda 
+Jugada: 7 
+Movimientos: Abajo Izquierda Arriba Derecha 
+Jugada: 9 
+Movimientos: Derecha Arriba Izquierda Derecha 
+17/8/2002
+Jugador 1: Maria, Chile, 74 años
+Jugada: 4 
+Movimientos: Arriba Izquierda Derecha Derecha 
+Jugada: 21 
+Movimientos: Arriba Derecha Arriba Izquierda 
+Jugada: 24 
+Movimientos: Derecha Arriba Izquierda Derecha 
+Jugada: 31 
+Movimientos: Derecha Abajo Izquierda Izquierda 
+7/4/1983
+Jugador 20: Mario, Argentina, 33 años
+Jugada: 1 
+Movimientos: Arriba Derecha Izquierda Abajo 
+11/2/1956
+62>#  verifico que esten 4 jugadores distintos y los obtengo .
+63>El jugador con nombre Maria está en la lista.
+64>Jugador 1: Maria, Chile, 74 años
+Jugada: 4 
+Movimientos: Arriba Izquierda Derecha Derecha 
+Jugada: 21 
+Movimientos: Arriba Derecha Arriba Izquierda 
+Jugada: 24 
+Movimientos: Derecha Arriba Izquierda Derecha 
+Jugada: 31 
+Movimientos: Derecha Abajo Izquierda Izquierda 
+65>El jugador con nombre Juana está en la lista.
+66>Jugador 5: Juana, Uruguay, 12 años
+Jugada: 1 
+Movimientos: Derecha Arriba Abajo Izquierda 
+Jugada: 3 
+Movimientos: Derecha Izquierda Derecha Izquierda 
+67>El jugador con nombre Pedro está en la lista.
+68>Jugador 10: Pedro, Uruguay, 23 años
+Jugada: 4 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugada: 5 
+Movimientos: Arriba Derecha Izquierda Arriba 
+69>El jugador con nombre Jose está en la lista.
+70>Jugador 8: Jose, Uruguay, 20 años
+Jugada: 6 
+Movimientos: Izquierda Izquierda Derecha Abajo 
+71>#  ahora elimino a esos jugadores y verifico que no estan mas.
+72>73>El jugador con nombre Maria NO está en la lista.
+74>75>El jugador con nombre Juana NO está en la lista.
+76>77>El jugador con nombre Pedro NO está en la lista.
+78>79>El jugador con nombre Jose NO está en la lista.
+80>#  imprimo la cantidad y la lista.
+81>La cantidad de jugadores en la lista es: 2.
+82>Jugador 13: Antonio, Uruguay, 64 años
+Jugada: 5 
+Movimientos: Abajo Derecha Arriba Izquierda 
+Jugada: 7 
+Movimientos: Abajo Izquierda Arriba Derecha 
+Jugada: 9 
+Movimientos: Derecha Arriba Izquierda Derecha 
+17/8/2002
+Jugador 20: Mario, Argentina, 33 años
+Jugada: 1 
+Movimientos: Arriba Derecha Izquierda Abajo 
+11/2/1956
+83>#  libero la lista.
+84>85>Fin.

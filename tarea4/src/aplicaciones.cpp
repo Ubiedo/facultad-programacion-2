@@ -3,11 +3,19 @@
 
 void listarEnOrden(TTablaJugadores t, char** nombres, nat n){
     // creamos la cola
-    TColaDePrioridadJugador cola = crearCP(n);
+    nat max;
+    if (n > MAX_ID){
+        max = n;
+    } else {
+        max = MAX_ID;
+    }
+    TColaDePrioridadJugador cola = crearCP(max);
     // insertar una copia en la cola
-    for (nat i = 1; i <= n; i++){
+    for (nat i = 0; i < n; i++){
         // obtener el jugador y agregarlo
-        insertarEnCP(copiarTJugador(obtenerJugadorDeTTablaJugadores(t, nombres[i])), cola);
+        if (perteneceATTablaJugadores(t, nombres[i])){
+            insertarEnCP(copiarTJugador(obtenerJugadorDeTTablaJugadores(t, nombres[i])), cola);
+        }
     }
     // imprimimos los jugadores por orden de prioridad
     while (!estaVaciaCP(cola)){

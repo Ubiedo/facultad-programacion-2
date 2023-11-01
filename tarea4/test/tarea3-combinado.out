@@ -1,0 +1,379 @@
+1>2>#  imprimo la cantidad de elementos de la cola, que debe ser 0.
+3>La cantidad de arboles de jugadores en la cola es: 0.
+4>#  Creo arbol con Jugadores 4 y 5.
+5>6>7>8>9>10>#  Encolo el arbol con Jugadores 4 y 5.
+11>12>#  imprimo la cantidad de elementos de la cola, que debe ser 1.
+13>La cantidad de arboles de jugadores en la cola es: 1.
+14>#  obtengo el frente de la cola, que es el árbol con los Jugadores 4 y 5.
+15>Jugador 4: Juan, Uruguay, 21 años
+Jugador 5: Maria, Argentina, 11 años
+16>#  libero la memoria asociada a la cola.
+17>18>#  imrpimo el arbol con los Jugadores 4 y 5.
+19>Jugador 4: Juan, Uruguay, 21 años
+Jugador 5: Maria, Argentina, 11 años
+20>#  libero el árbol.
+21>22>23>#  imprimo la cantidad de elementos en la cola, que debe ser 0.
+24>La cantidad de arboles de jugadores en la cola es: 0.
+25>#  creo un árbol de jugadores, inicialmente vacío.
+26>27>#  Encolo el arbol vacio recién creado.
+28>29>#  creo un árbol de jugadores, inicialmente vacío.
+30>31>#  creo e inserto 2 jugadores en el árbol.
+32>33>34>35>36>#  Encolo el arbol con dos jugadores.
+37>38>#  creo un árbol de jugadores, inicialmente vacío.
+39>40>#  creo e inserto 2 jugadores en el árbol.
+41>42>43>44>45>#  Encolo el arbol con dos jugadores.
+46>47>#  creo un árbol de jugadores, inicialmente vacío.
+48>49>#  creo e inserto 2 jugadores en el árbol.
+50>51>52>53>54>#  Encolo el arbol con dos jugadores.
+55>56>#  creo un árbol de jugadores, inicialmente vacío.
+57>58>#  creo e inserto 2 jugadores en el árbol.
+59>60>61>62>63>#  Encolo el arbol con dos jugadores.
+64>65>#  imprimo la cantidad de elementos en la cola, debe haber 5 elementos.
+66>La cantidad de arboles de jugadores en la cola es: 5.
+67>#  Obtengo el frente de la cola, es el árbol vacío.
+68>Arbol vacio
+69>#  Elimino de la Cola el árbol vacio.
+70>71>#  libero la memoria asociada al árbol que obtuve.
+72>73>#  imprimo la cantidad de elementos en la cola, debe haber 4 elementos.
+74>La cantidad de arboles de jugadores en la cola es: 4.
+75>#  Obtengo el frente de la cola, es un árbol con 2 jugadores (Jugadores 4 y 5).
+76>Jugador 4: Raul, Uruguay, 55 años
+Jugador 5: Maria, Argentina, 11 años
+77>#  Elimino de la Cola el Arbol con Jugadores 4 y 5.
+78>79>#  libero la memoria asociada al árbol que obtuve.
+80>81>#  imprimo la cantidad de elementos en la cola, debe haber 3 elementos.
+82>La cantidad de arboles de jugadores en la cola es: 3.
+83>#  Obtengo el frente de la cola.
+84>Jugador 4: Raul, Uruguay, 55 años
+Jugador 5: Maria, Argentina, 11 años
+85>#  Elimino de la Cola el Arbol.
+86>87>#  libero la memoria asociada al árbol que obtuve.
+88>89>#  imprimo la cantidad de elementos en la cola, debe haber 2 elementos.
+90>La cantidad de arboles de jugadores en la cola es: 2.
+91>#  Obtengo el frente de la cola.
+92>Jugador 4: Raul, Uruguay, 55 años
+Jugador 5: Maria, Argentina, 11 años
+93>#  Elimino de la Cola el Arbol.
+94>95>#  imprimo la cantidad de elementos en la cola, debe haber 1 elemento.
+96>La cantidad de arboles de jugadores en la cola es: 1.
+97>#  libero la memoria asociada al árbol que obtuve.
+98>99>#  Obtengo el frente de la cola.
+100>Jugador 4: Raul, Uruguay, 55 años
+Jugador 5: Maria, Argentina, 11 años
+101>#  Elimino de la Cola el Arbol.
+102>103>#  libero la memoria asociada al árbol que obtuve.
+104>105>#  imprimo la cantidad de elementos en la cola, debe haber 0 elementos.
+106>La cantidad de arboles de jugadores en la cola es: 0.
+107>#  libero la memoria asociada a la cola.
+108>109>110>#  Creo arbol con un jugador.
+111>112>113>114>#  Encolo el arbol con Jugador 2.
+115>116>#  imprimo la cantidad de elementos en la cola, debe haber 1 elemento.
+117>La cantidad de arboles de jugadores en la cola es: 1.
+118>#  Obtengo el frente de la Cola.
+119>Jugador 2: Pablo, Chile, 56 años
+120>#  Elimino de la Cola el Arbol con Jugador 2.
+121>122>#  libero la memoria asociada al árbol que obtuve.
+123>124>#  libero la memoria asociada a la cola.
+125>126>127>#  imprimo la cantidad de elementos en la cola, que debe ser 0.
+128>La cantidad de arboles de jugadores en la cola es: 0.
+129>#  creo un árbol de jugadores, inicialmente vacío.
+130>131>#  Encolo el arbol vacio recién creado.
+132>133>#  imprimo la cantidad de elementos en la cola, debe haber 1 elemento.
+134>La cantidad de arboles de jugadores en la cola es: 1.
+135>#  obtengo nuevamente el Arbol y lo desencolo.
+136>Arbol vacio
+137>138>#  imprimo la cantidad de elementos en la cola, debe haber 0 elemento.
+139>La cantidad de arboles de jugadores en la cola es: 0.
+140>#  creo e inserto 2 jugadores en el árbol.
+141>142>143>144>145>#  Encolo el arbol con dos jugadores.
+146>147>#  imprimo la cantidad de elementos en la cola, debe haber 1 elemento.
+148>La cantidad de arboles de jugadores en la cola es: 1.
+149>#  creo un árbol de jugadores, inicialmente vacío.
+150>151>#  creo e inserto 1 jugador en el árbol.
+152>153>154>#  Encolo el arbol con dos jugadores.
+155>156>#  imprimo la cantidad de elementos en la cola, debe haber 2 elementos.
+157>La cantidad de arboles de jugadores en la cola es: 2.
+158>#  creo un árbol de jugadores, inicialmente vacío.
+159>160>#  creo e inserto 1 jugador en el árbol.
+161>162>163>#  Encolo el arbol con dos jugadores.
+164>165>#  imprimo la cantidad de elementos en la cola, debe haber 3 elementos.
+166>La cantidad de arboles de jugadores en la cola es: 3.
+167>#  Obtengo el frente de la cola, es el árbol con Maria y Raul.
+168>Jugador 4: Raul, Uruguay, 55 años
+Jugador 5: Maria, Uruguay, 11 años
+169>#  Elimino de la Cola el árbol con Maria y Raul.
+170>171>#  libero la memoria asociada al árbol que obtuve.
+172>173>#  imprimo la cantidad de elementos en la cola, debe haber 2 elementos.
+174>La cantidad de arboles de jugadores en la cola es: 2.
+175>#  Obtengo el frente de la cola, es un árbol con Raul.
+176>Jugador 2: Raul, Uruguay, 55 años
+177>#  Elimino de la Cola el Arbol con Jugador Raul.
+178>179>#  libero la memoria asociada al árbol que obtuve.
+180>181>#  imprimo la cantidad de elementos en la cola, debe haber 1 elemento.
+182>La cantidad de arboles de jugadores en la cola es: 1.
+183>#  Obtengo el frente de la cola, es un árbol con Maria.
+184>Jugador 3: Maria, Uruguay, 11 años
+185>#  Elimino de la Cola el Arbol.
+186>187>#  libero la memoria asociada al árbol que obtuve.
+188>189>#  imprimo la cantidad de elementos en la cola, debe haber 0 elemntos.
+190>La cantidad de arboles de jugadores en la cola es: 0.
+191>#  libero la memoria asociada a la cola.
+192>193>#  -------------------------------------------.
+194>195>196>197>198>199>200>201>202>203>204>205>206>207>208>209>210>211>212>213>214>215>216>217>218>219>220>221>222>223>224>225>226>227>228>229>230>231>232>233>234>235>236>237>238>239>#  imprimo la cantidad de elementos en la cola, debe haber 22 elemntos.
+240>La cantidad de arboles de jugadores en la cola es: 22.
+241>Arbol vacio
+242>243>244>Arbol vacio
+245>246>247>Arbol vacio
+248>249>250>Arbol vacio
+251>252>253>Arbol vacio
+254>255>256>Arbol vacio
+257>258>259>Arbol vacio
+260>261>262>Arbol vacio
+263>264>265>Arbol vacio
+266>267>268>Arbol vacio
+269>270>271>Arbol vacio
+272>273>274>Arbol vacio
+275>276>277>Arbol vacio
+278>279>280>Arbol vacio
+281>282>283>Arbol vacio
+284>285>286>Arbol vacio
+287>288>289>Arbol vacio
+290>291>292>Arbol vacio
+293>294>295>Arbol vacio
+296>297>298>Arbol vacio
+299>300>301>Arbol vacio
+302>303>304>Arbol vacio
+305>306>307>308>#  crea un conjunto con rango 1..10.
+309>310>#  imprime el conjunto vacio, esto es, una linea vacia.
+311>
+312>313>#  imprime un conjunto con 3 como unico elemento.
+314>3 
+315>316>317>#  imprime conjunto con 3 elementos.
+318>3 5 7 
+319>320>321>#  imprimir conjunto con casos borde.
+322>1 3 5 7 10 
+323>#  intenta insertar elementos fuera de rango.
+324>325>326>#  imprime el conjunto sin modificaciones.
+327>1 3 5 7 10 
+328>#  libera el conjunto.
+329>330>#  crea un conjunto con rango 1..10.
+331>332>#  verifica si el conjunto es vacío (lo es).
+333>El conjunto de ids está vacío.
+334>#  inserta 7 elementos.
+335>336>337>338>339>340>341>342>#  imprime el conjunto.
+343>1 2 3 5 6 7 9 
+344>#  verifica si el conjunto es vacío (no lo es).
+345>El conjunto de ids NO está vacío.
+346>347>#  imprime el conjunto borrando el 1.
+348>2 3 5 6 7 9 
+349>350>351>352>353>#  borra los impares e imprime solo elementos pares.
+354>2 6 
+355>#  borra el resto de elementos e imprime el conjunto vacio .
+356>357>358>
+359>#  libera el conjunto .
+360>361>#  crea un conjunto con rango 1..10.
+362>363>#  verifica cantidad máxima del conjunto (10).
+364>La cantidad máxima del conjunto es: 10.
+365>#  inserta 7 elementos.
+366>367>368>369>370>371>372>373>#  imprime el conjunto.
+374>1 2 3 5 6 7 9 
+375>#  verifica dos elementos que si pertenecen.
+376>El elemento 3 pertenece al conjunto.
+377>El elemento 7 pertenece al conjunto.
+378>#  verifica dos elementos que no pertenecen y estan en el rango.
+379>El elemento 4 no pertenece al conjunto.
+380>El elemento 8 no pertenece al conjunto.
+381>#  verifica dos elementos que no pertenecen y no estan en el rango.
+382>El elemento 0 no pertenece al conjunto.
+383>El elemento 11 no pertenece al conjunto.
+384>#  imprime el cardinal del conjunto .
+385>El cardinal del conjunto es: 7.
+386>#  borra dos elementos e imprime el cardinal.
+387>388>389>El cardinal del conjunto es: 5.
+390>#  verifica que los elementos borrados no esten mas .
+391>El elemento 1 no pertenece al conjunto.
+392>El elemento 5 no pertenece al conjunto.
+393>#  libera el conjunto .
+394>395>#  crea un conjunto con rango 1..10.
+396>397>#  inserta 5 elementos pares.
+398>399>400>401>402>403>2 4 6 8 10 
+404>#  crea un conjunto auxiliar con rango 1..10.
+405>406>#  inserta 5 elementos impares.
+407>408>409>410>411>412>1 3 5 7 9 
+413>#  crea la union entre los conjuntos, la imprime y la libera .
+414>1 2 3 4 5 6 7 8 9 10 
+415>#  libera los dos conjuntos.
+416>417>418># 
+.
+419># 
+.
+420># 
+.
+421>#  crea un conjunto con rango 1..12.
+422>423>#  inserta 7 elementos.
+424>425>426>427>428>429>430>431>1 2 3 4 5 6 7 
+432>#  crea un conjunto auxiliar con rango 1..12.
+433>434>#  inserta 7 elementos.
+435>436>437>438>439>440>441>442>6 7 8 9 10 11 12 
+443>#  crea la union entre los conjuntos, la imprime y la libera (en este caso hay elementos en comun).
+444>1 2 3 4 5 6 7 8 9 10 11 12 
+445>#  libera los dos conjuntos .
+446>447>448>#  crea un conjunto con rango 1..10.
+449>450>#  inserta 5 elementos pares.
+451>452>453>454>455>456>2 4 6 8 10 
+457>#  crea un conjunto auxiliar con rango 1..10.
+458>459>#  inserta 5 elementos impares.
+460>461>462>463>464>465>1 3 5 7 9 
+466>#  crea la interseccion entre los conjuntos (es vacia), la imprime y la libera .
+467>
+468>#  libera los dos conjuntos.
+469>470>471># 
+.
+472># 
+.
+473># 
+.
+474>#  crea un conjunto con rango 1..12.
+475>476>#  inserta 7 elementos.
+477>478>479>480>481>482>483>484>1 2 3 4 5 6 7 
+485>#  crea un conjunto auxiliar con rango 1..12.
+486>487>#  inserta 7 elementos.
+488>489>490>491>492>493>494>495>6 7 8 9 10 11 12 
+496>#  crea la interseccion entre los conjuntos, la imprime y la libera (en este caso hay 2 elementos en comun).
+497>6 7 
+498>#  libera los dos conjuntos .
+499>500>501>502>#  Construyo arbol .
+503>#  -- Primer jugador Juan 1 --.
+504>505>506>507>508>El árbol de jugadores NO está vacío.
+509>#  -- Segundo jugador Roberto 5 --.
+510>511>512>513>514>#  -- Tercer jugador Luis 7 --.
+515>516>517>518>519>#  -- Cuarto jugador Andres 8 --.
+520>521>522>523>524>#  -- Quinto jugador Emilia 2 --.
+525>526>527>528>529>#  -- Sexto jugador Ines 10 --.
+530>531>532>533>534>#  -- Septimo jugador Isabel 3 --.
+535>536>537>538>539>#  La maxima amplitud es 2.
+540>La amplitud del árbol es: 2.
+541>542>543>#  Construyo arbol .
+544>#  -- Primer jugador Juan 7 --.
+545>546>547>548>549>#  -- Segundo jugador Roberto 20 --.
+550>551>552>553>554>#  -- Tercer jugador Luis 2 --.
+555>556>557>558>559>#  imprimo arbol.
+560>Jugador 2: Luis, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 7: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugador 20: Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+561>#  Transformo arbol en lista.
+562>Jugador 7: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+Jugador 2: Luis, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 20: Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+563>564>565>#  Construyo arbol .
+566>567>568>569>570>571>572>573>574>575>576>577>578>579>580>581>582>583>584>585>586>587>588>589>590>591>592>593>594>595>596>597>598>599>600>601>602>603>604>605>606>607>608>609>610>611>612>613>614>615>616>617>618>619>620>621>622>623>624>625>626>627>628>629>630>#  La maxima amplitud es 5.
+631>La amplitud del árbol es: 5.
+632>633>634>#  Construyo arbol .
+635>636>637>638>639>640>641>642>643>644>645>646>647>648>649>650>651>652>653>654>655>656>657>658>659>660>661>662>663>664>665>666>667>668>669>670>671>672>673>674>675>676>677>678>679>680>681>682>683>684>685>686>687>688>689>690>691>692>693>694>695>696>697>698>699>#  Transformo arbol en lista.
+700>Jugador 20: Juan, Uruguay, 20 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 12: Rosa, Uruguay, 12 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 30: Perez, Uruguay, 30 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 6: Jose, Uruguay, 6 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 15: Raul, Uruguay, 15 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 25: Noelia, Uruguay, 25 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 35: Nicolas, Uruguay, 35 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 3: Sofia, Uruguay, 3 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 7: Emiliano, Uruguay, 7 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 13: Lucia, Uruguay, 13 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 16: Enrique, Uruguay, 16 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 22: Matias, Uruguay, 22 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 26: Martin, Uruguay, 26 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 33: Emily, Uruguay, 33 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 36: Diego, Uruguay, 36 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+Jugador 23: Noelia, Uruguay, 23 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+701>702>703>#  Crear lista de jugadores: Luis, Roberto, Juan, Pedro.
+704>705>706>707>708>709>710>711>712>713>714>715>716>717>718>719>720>721>722>723>724>#  imprimir contenido lista LDE.
+725>Jugador 7: Luis, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+1/1/2023
+Jugador 5: Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+5/12/2022
+Jugador 1: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+1/12/2022
+Jugador 2: Pedro, Uruguay, 7 años
+Jugada: 1 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+30/11/2022
+726>#  imprimir inicio lista: Luis.
+727>Jugador 7: Luis, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Derecha Derecha Derecha 
+728>729>#  imprimir inicio lista: Roberto.
+730>Jugador 5: Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+731>732>#  imprimir inicio lista: Roberto.
+733>Jugador 5: Roberto, Brasil, 19 años
+Jugada: 1 
+Movimientos: Abajo Arriba Izquierda Derecha 
+734>735>736>La cantidad de jugadores en la pila es: 0.
+737>738>739>La cantidad de jugadores en la pila es: 0.
+740>741>742>743>744>745>746>La cantidad de jugadores en la pila es: 1.
+747>748>749>750>751>752>753>La cantidad de jugadores en la pila es: 2.
+754>755>756>757>758>759>760>La cantidad de jugadores en la pila es: 3.
+761>Jugador 4: Jessica, Uruguay, 23 años
+Jugada: 3 
+Movimientos: Abajo Arriba Izquierda Derecha 
+762>763>La cantidad de jugadores en la pila es: 2.
+764>Jugador 7: Nicolás, Uruguay, 20 años
+Jugada: 2 
+Movimientos: Izquierda Izquierda Izquierda Izquierda 
+765>766>La cantidad de jugadores en la pila es: 1.
+767>Jugador 1: Juan, Uruguay, 21 años
+Jugada: 1 
+Movimientos: Derecha Izquierda Arriba Abajo 
+768>769>770>Fin.
