@@ -21,8 +21,8 @@ Este repositorio contiene las tareas pedidas para la materia, organizadas en cua
   - Cola de estructuras de árboles de jugadores.
   - Tabla hash para búsqueda de jugadores por nombre.
 
-> El código está desarrollado principalmente en **C++**, con algunos módulos en **C**.  
-> El `Makefile` fue provisto por la cátedra de la materia.
+> El código está desarrollado principalmente en **C++**, con algunos módulos en **C**.
+> El `Makefile` fue proporcionado por la Facultad de Ingeniería como parte del material base del curso.
 
 ## 💻 Tecnologías utilizadas
 
