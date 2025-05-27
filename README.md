@@ -52,4 +52,4 @@ make          # Compila el proyecto
 
 ## 👤 Autor
 
-- Ubiedo – [@Ubiedo](https://github.com/Ubiedo)
+- Federico Javier González Ubiedo – [@Ubiedo](https://github.com/Ubiedo)
